@@ -6,5 +6,7 @@ namespace BankBusinessLogic.BindingModels
 {
     public class CreateDealBindingModel
     {
+        public int? Id { get; set; }  
+        public Dictionary<int, CreditType> DealCredit { get; set; }
     }
 }
