@@ -1,0 +1,9 @@
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.deps.json
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.dll
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.pdb
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.csprojAssemblyReference.cache
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.AssemblyInfoInputs.cache
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.AssemblyInfo.cs
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.dll
+C:\Users\NULS\source\repos\Bank\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.pdb
