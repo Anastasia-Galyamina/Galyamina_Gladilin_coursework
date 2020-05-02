@@ -1,0 +1,12 @@
+C:\Users\NULS\source\repos\Bank\BankListImplement\bin\Debug\netstandard2.0\BankListImplement.deps.json
+C:\Users\NULS\source\repos\Bank\BankListImplement\bin\Debug\netstandard2.0\BankListImplement.dll
+C:\Users\NULS\source\repos\Bank\BankListImplement\bin\Debug\netstandard2.0\BankListImplement.pdb
+C:\Users\NULS\source\repos\Bank\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.csprojAssemblyReference.cache
+C:\Users\NULS\source\repos\Bank\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.csproj.CoreCompileInputs.cache
+C:\Users\NULS\source\repos\Bank\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.AssemblyInfoInputs.cache
+C:\Users\NULS\source\repos\Bank\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.AssemblyInfo.cs
+C:\Users\NULS\source\repos\Bank\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.dll
+C:\Users\NULS\source\repos\Bank\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.pdb
+C:\Users\NULS\source\repos\Bank\BankListImplement\bin\Debug\netstandard2.0\BankBusinessLogic.dll
+C:\Users\NULS\source\repos\Bank\BankListImplement\bin\Debug\netstandard2.0\BankBusinessLogic.pdb
+C:\Users\NULS\source\repos\Bank\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.csproj.CopyComplete
