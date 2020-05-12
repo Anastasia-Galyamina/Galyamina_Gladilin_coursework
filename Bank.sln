@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankBusinessLogic", "BankBu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankListImplement", "BankListImplement\BankListImplement.csproj", "{CA64D695-A042-44E6-A4EA-3A90EAA7E7FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankView", "BankView\BankView.csproj", "{1B2E1854-F79E-43F4-B937-E95105A01912}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankViewClient", "BankView\BankViewClient.csproj", "{1B2E1854-F79E-43F4-B937-E95105A01912}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankDataBaseImplement", "BankDataBaseImplement\BankDataBaseImplement.csproj", "{F4475DBE-42EA-44EB-A50A-B5F668F6A89B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankDataBaseImplement", "BankDataBaseImplement\BankDataBaseImplement.csproj", "{F4475DBE-42EA-44EB-A50A-B5F668F6A89B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankViewAdmin", "..\..\..\Desktop\algoritm-ver\BankView\BankViewAdmin.csproj", "{0A0045D1-703C-4291-AC09-2B3F96AA434C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F4475DBE-42EA-44EB-A50A-B5F668F6A89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4475DBE-42EA-44EB-A50A-B5F668F6A89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4475DBE-42EA-44EB-A50A-B5F668F6A89B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A0045D1-703C-4291-AC09-2B3F96AA434C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0045D1-703C-4291-AC09-2B3F96AA434C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0045D1-703C-4291-AC09-2B3F96AA434C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0045D1-703C-4291-AC09-2B3F96AA434C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

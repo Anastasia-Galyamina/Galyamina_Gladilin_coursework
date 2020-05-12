@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GUBGbyB5HgctcX+xxuUCv04tXE39PiCndo5anopPr7lTJ0U5eOhlj5Ptgyi4kJ6xw/fNe6eG6mQ40uWTcb/fDw==",
+  "dgSpecHash": "7/tcE4niXWQr0h7jVW9Or495B50O9COFgXyYsNE9yBTM37tlHj945UZu4EO1/xISXK3aIIHsBCD1ympFMqFN8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NULS\\source\\repos\\Bank\\BankListImplement\\BankListImplement.csproj",
+  "projectFilePath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework\\BankListImplement\\BankListImplement.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\anast\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\anast\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

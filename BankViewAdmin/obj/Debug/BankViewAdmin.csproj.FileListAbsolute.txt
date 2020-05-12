@@ -1,0 +1,10 @@
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankViewAdmin.csprojAssemblyReference.cache
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankView.FormAddCredit.resources
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankView.FormAddMoney.resources
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankView.FormCredits.resources
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankView.FormDeal.resources
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankView.FormMain.resources
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankView.FormMoney.resources
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankViewAdmin.Properties.Resources.resources
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankViewAdmin.csproj.GenerateResource.cache
+C:\Users\anast\source\repos\Galyamina_Gladilin_coursework\BankViewAdmin\obj\Debug\BankViewAdmin.csproj.CoreCompileInputs.cache
