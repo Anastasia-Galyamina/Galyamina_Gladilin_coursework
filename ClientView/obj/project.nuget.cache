@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wS6L/VndhUSL2FMzZzmKOrAGjMYodSjQ+JvuBVYngI9O89c5LUehC3IB/RKcRNZhMgbXA+gPPxbtax7NUq0bTw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NULS\\Desktop\\Galyamina_Gladilin_coursework-Vers-7\\ClientView\\ClientView.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NULS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
