@@ -11,12 +11,14 @@ namespace BankDataBaseImplement.Models
         public int? DealId { get; set; }
         public int CreditId { get; set; }
         [Required]
-        public int Count { get; set; }
+        public int Sum { get; set; }
         [Required]
-        public DateTime? dateImplement { get; set; }
+        public DateTime? Date { get; set; }
         [Required]
         public string currency { get; set; }
         public virtual Credit Credit { get; set; }
         public virtual Deal Deal { get; set; }
+
+       
     }
 }

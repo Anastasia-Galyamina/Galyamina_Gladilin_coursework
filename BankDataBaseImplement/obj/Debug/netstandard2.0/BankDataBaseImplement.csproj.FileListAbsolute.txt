@@ -34,3 +34,9 @@ C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankDataBaseImplement
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.csproj.CopyComplete
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.dll
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.pdb
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.csprojAssemblyReference.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.csproj.CoreCompileInputs.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.AssemblyInfoInputs.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.AssemblyInfo.cs
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.dll
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankDataBaseImplement\obj\Debug\netstandard2.0\BankDataBaseImplement.pdb

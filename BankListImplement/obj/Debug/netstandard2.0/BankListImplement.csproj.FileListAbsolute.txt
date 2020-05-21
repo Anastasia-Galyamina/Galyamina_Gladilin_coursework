@@ -34,3 +34,9 @@ C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankListImplement\obj
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.csproj.CopyComplete
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.dll
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.pdb
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.csprojAssemblyReference.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.csproj.CoreCompileInputs.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.AssemblyInfoInputs.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.AssemblyInfo.cs
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.dll
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.pdb

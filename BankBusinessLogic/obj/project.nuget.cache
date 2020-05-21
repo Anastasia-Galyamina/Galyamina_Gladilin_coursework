@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZfWkNy7Bpa2DsJb/It5ZIuRy+5INr/q9It6PJJePMHmquMt0LD5rk0WMxOPBSNVPD8X54TvyUuUFRXx5/xVYvg==",
+  "dgSpecHash": "ZdxElIb+DkM6to3wZlG3L1OntCHJbFoa0M+SYTAicEodXR8+ddPC+Z3seTfkLqsWlLCr4hKpMuy7XREuBJfLfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NULS\\Desktop\\Galyamina_Gladilin_coursework-Vers-7\\BankBusinessLogic\\BankBusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\anast\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\anast\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

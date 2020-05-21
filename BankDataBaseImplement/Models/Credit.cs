@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankBusinessLogic.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,11 +11,13 @@ namespace BankDataBaseImplement.Models
     {
         public int Id { get; set; }
         [Required]
-        public string CreditName { get; set; }
-        [Required]
-        public int CountMoney { get; set; }
-        public DateTime? DateImplement { get; set; }
-        public string currency { get; set; }
-        [ForeignKey("CreditId")] public virtual List<DealCredit> DealCredits { get; set; }
+        public string CreditName { get; set; }               
+        public DateTime? Time { get; set; }
+
+        public CreditType Type { get; set; }
+
+        [ForeignKey("CreditId")]
+        public virtual List<DealCredit> DealCredits { get; set; }
+
     }
 }

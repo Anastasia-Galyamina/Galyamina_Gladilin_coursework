@@ -180,3 +180,15 @@ C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankView\obj\Debug\Ba
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankView\obj\Debug\BankViewClient.csproj.CopyComplete
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankView\obj\Debug\BankView.exe
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-Vers-7\BankView\obj\Debug\BankView.pdb
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.csprojAssemblyReference.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.FormAddCredit.resources
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.FormAddMoney.resources
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.FormCredits.resources
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.FormDeal.resources
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.FormMain.resources
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.FormMoney.resources
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.Properties.Resources.resources
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.csproj.GenerateResource.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.csproj.CoreCompileInputs.cache
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.exe
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankView.pdb
