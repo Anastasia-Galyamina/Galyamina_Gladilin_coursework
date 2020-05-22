@@ -19,7 +19,7 @@ namespace BankDataBaseImplement.Implements
                rec.currency == model.currency && rec.Id != model.Id);
                 if (element != null)
                 {
-                    throw new Exception("Уже есть компонент с таким названием");
+                    throw new Exception("Уже есть такая валюта");
                 }
                 if (model.Id.HasValue)
                 {

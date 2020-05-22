@@ -14,7 +14,7 @@ namespace BankDataBaseImplement.Implements
     {
         public void CreateOrUpdate(DealBindingModel model)
         {
-            using (var context = new BankDataBase())
+            /*using (var context = new BankDataBase())
             {
                 using (var transaction = context.Database.BeginTransaction())
                 {
@@ -24,7 +24,7 @@ namespace BankDataBaseImplement.Implements
                        rec.DealName == model.DealName && rec.Id != model.Id);
                         if (element != null)
                         {
-                            throw new Exception("Уже есть изделие с таким названием");
+                            throw new Exception("Уже есть сделка с таким названием");
                         }
                         if (model.Id.HasValue)
                         {
@@ -42,7 +42,7 @@ namespace BankDataBaseImplement.Implements
                         }
                         element.DealName = model.DealName;
                         element.ClientId = model.ClientId;
-                        element.ClientFIO = model.ClientFIO;
+                        element.Date = model.Date;
                         context.SaveChanges();
                         if (model.Id.HasValue)
                         {
@@ -69,10 +69,7 @@ namespace BankDataBaseImplement.Implements
                             context.DealCredits.Add(new DealCredit
                             {
                                 DealId = element.Id,
-                                CreditId = pc.Key,
-                                Count = pc.Value.Item2,
-                                dateImplement =pc.Value.Item3,
-                                currency = pc.Value.Item4
+                                CreditId = pc.Key,                                
                             });
                             context.SaveChanges();
                         }
@@ -84,7 +81,7 @@ namespace BankDataBaseImplement.Implements
                         throw;
                     }
                 }
-            }
+            }*/
         }
 
         public void Delete(DealBindingModel model)
@@ -94,7 +91,8 @@ namespace BankDataBaseImplement.Implements
 
         public List<DealViewModel> Read(DealBindingModel model)
         {
-            using (var context = new BankDataBase())
+            return null;
+            /*using (var context = new BankDataBase())
             {
                 return context.Deals
                 .Where(rec => model == null || rec.Id == model.Id)
@@ -102,8 +100,7 @@ namespace BankDataBaseImplement.Implements
                .Select(rec => new DealViewModel
                {
                    Id = rec.Id,
-                   DealName = rec.DealName,
-                   ClientFIO = rec.ClientFIO,
+                   DealName = rec.DealName,                 
                    ClientId = rec.ClientId,
                    DealCredit = context.DealCredits
                 .Include(recPC => recPC.Credit)
@@ -112,7 +109,7 @@ namespace BankDataBaseImplement.Implements
                 (recPC.Credit?.CreditName, recPC.Count,recPC.dateImplement,recPC.currency))
                })
                .ToList();
-            }
+            }*/
         }
     }
 }

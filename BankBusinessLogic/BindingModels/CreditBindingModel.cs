@@ -1,7 +1,6 @@
 ﻿using BankBusinessLogic.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace BankBusinessLogic.BindingModels
 {

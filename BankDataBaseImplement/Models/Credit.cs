@@ -10,10 +10,10 @@ namespace BankDataBaseImplement.Models
     public class Credit
     {
         public int Id { get; set; }
+        
         [Required]
         public string CreditName { get; set; }               
-        public DateTime? Time { get; set; }
-
+        public String Date { get; set; }
         public CreditType Type { get; set; }
 
         [ForeignKey("CreditId")]

@@ -15,7 +15,6 @@ namespace BankDataBaseImplement.Models
         [Required]
         public string PhoneNumber { get; set; }
         [Required]
-        public string Password { get; set; }
-        public virtual List<Deal> Deals { get; set; }
+        public string Password { get; set; }        
     }
 }

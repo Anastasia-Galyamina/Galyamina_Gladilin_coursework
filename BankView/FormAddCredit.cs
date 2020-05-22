@@ -12,20 +12,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 
-namespace BankView
+namespace BankViewClient
 {
     public partial class FormAddCredit : Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
-        private readonly IMoneyLogic logic;
-        private readonly ICreditLogic logicC;
         public int Id
         {
-            get { return Convert.ToInt32(comboBoxCurr.SelectedValue); }
-            set { comboBoxCurr.SelectedValue = value; }
+            get { return Convert.ToInt32(comboBox.SelectedValue); }
+            set { comboBox.SelectedValue = value; }
         }
-        public string CreditName { get { return textBoxName.Text; } }
+        public string ComponentName { get { return comboBox.Text; } }
         public int Count
         {
             get { return Convert.ToInt32(textBoxCount.Text); }
@@ -34,67 +32,38 @@ namespace BankView
                 textBoxCount.Text = value.ToString();
             }
         }
-        public DateTime date
-        {
-            get { return dateTimePicker.Value; }
-            set
-            {
-                dateTimePicker.Value = value;
-            }
-        }
-        public string currency
-        {
-            get { return comboBoxCurr.Text; }
-        }
-        public FormAddCredit(ICreditLogic logic , IMoneyLogic moneyLogic)
+        public FormAddCredit(ICreditLogic logic)
         {
             InitializeComponent();
-            this.logic = moneyLogic;
-            this.logicC = logic;
-            List<MoneyViewModel> list = moneyLogic.Read(null);
+            List<CreditViewModel> list = logic.Read(null);
             if (list != null)
             {
-                comboBoxCurr.DisplayMember = "currency";
-                comboBoxCurr.ValueMember = "Id";
-                comboBoxCurr.DataSource = list;
-                comboBoxCurr.SelectedItem = null;
+                comboBox.DisplayMember = "CreditName";
+                comboBox.ValueMember = "Id";
+                comboBox.DataSource = list;
+                comboBox.SelectedItem = null;
             }
         }
-
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void ButtonSave_Click(object sender, EventArgs e)
         {
-            try
-            {
-                logicC.CreateOrUpdate(new CreditBindingModel
-                {
-                    CreditName = textBoxName.Text,
-                    currency = comboBoxCurr.Text,
-                    DateImplement = dateTimePicker.Value,
-                    CountMoney = Convert.ToInt32(textBoxCount.Text)
-                });
-                MessageBox.Show("Сохранение прошло успешно", "Сообщение",
-               MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult = DialogResult.OK;
-                Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
-            }
             if (string.IsNullOrEmpty(textBoxCount.Text))
             {
                 MessageBox.Show("Заполните поле Количество", "Ошибка",
                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (comboBoxCurr.SelectedValue == null)
+            if (comboBox.SelectedValue == null)
             {
                 MessageBox.Show("Выберите компонент", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
             DialogResult = DialogResult.OK;
+            Close();
+        }
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
     }

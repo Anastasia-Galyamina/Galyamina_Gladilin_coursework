@@ -5,7 +5,6 @@ using BankDataBaseImplement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BankDataBaseImplement.Implements
 {
@@ -32,9 +31,8 @@ namespace BankDataBaseImplement.Implements
                     context.Credits.Add(element);
                 }
                 element.CreditName = model.CreditName;
-                element.CountMoney = model.CountMoney;
-                element.DateImplement = model.DateImplement;
-                element.currency = model.currency;
+                element.Date = model.Date;
+                element.Type = model.Type;                
                 context.SaveChanges();
             }
         }
@@ -52,11 +50,10 @@ namespace BankDataBaseImplement.Implements
                 .Where(rec => model == null || rec.Id == model.Id)
                 .Select(rec => new CreditViewModel
                 {
-                    Id = rec.Id,
-                    CountMoney = rec.CountMoney,
+                    Id = rec.Id,                    
                     CreditName = rec.CreditName,
-                    currency =rec.currency,
-                    DateImplement =rec.DateImplement
+                    Date =rec.Date,
+                    Type =rec.Type
                 })
                 .ToList();
             }

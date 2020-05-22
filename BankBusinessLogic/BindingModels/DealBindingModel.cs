@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.Serialization;
-using System.Text;
+
 
 namespace BankBusinessLogic.BindingModels
 {
@@ -10,8 +8,8 @@ namespace BankBusinessLogic.BindingModels
     {
         public int? Id { get; set; }
         public string DealName { set; get; }
-        public int ClientId { get; set; }
-        public string ClientFIO { get; set; }
+        public int ClientId { get; set; }    
+        public DateTime Date { get; set; }
         public Dictionary<int, (string, int, DateTime?,string)> DealCredits { get; set; }
     }
 }

@@ -12,10 +12,12 @@ namespace BankDataBaseImplement
         {
             if (optionsBuilder.IsConfigured == false)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-46FCCKM\SQLEXPRESS;Initial Catalog=BankDatabaseClient;Integrated Security=True;MultipleActiveResultSets=True;");
+                optionsBuilder.UseSqlServer(@"Data Source=WIN-O5P3KVSKC8M\SQLEXPRESS;Initial Catalog=BankDatabase;Integrated Security=True;MultipleActiveResultSets=True;");
             }
             base.OnConfiguring(optionsBuilder);
         }
+
+        public virtual DbSet<DealMoney> DealMoney { set; get; }
         public virtual DbSet<Money> Money { set; get; }
         public virtual DbSet<Credit> Credits { set; get; }
         public virtual DbSet<DealCredit> DealCredits { set; get; }

@@ -26,7 +26,7 @@ namespace BankListImplement.Implements
                 if (component.CreditName == model.CreditName && component.Id !=
                model.Id)
                 {
-                    throw new Exception("Уже есть компонент с таким названием");
+                    throw new Exception("Уже есть кредит с таким названием");
                 }
                 if (!model.Id.HasValue && component.Id >= tempComponent.Id)
                 {
@@ -50,24 +50,22 @@ namespace BankListImplement.Implements
                 source.Credits.Add(CreateModel(model, tempComponent));
             }
         }
-        private Credit CreateModel(CreditBindingModel model, Credit component)
+        private Credit CreateModel(CreditBindingModel model, Credit credit)
         {
-            component.CreditName = model.CreditName;
-            component.CountMoney = model.CountMoney;
-            component.DateImplement = model.DateImplement;
-            component.currency = model.currency;
-            return component;
+            credit.CreditName = model.CreditName;
+            credit.Type = model.Type;
+            credit.Date = model.Date;            
+            return credit;
         }
-        private CreditViewModel CreateViewModel(Credit component)
+        private CreditViewModel CreateViewModel(Credit credit)
         {
             return new CreditViewModel
             {
-                Id = component.Id,
-                CreditName = component.CreditName,
-                DateImplement= component.DateImplement,
-                CountMoney = component.CountMoney,
-                currency = component.currency               
-            };
+                Id = credit.Id,
+                CreditName = credit.CreditName,
+                Type = credit.Type,
+                Date = credit.Date
+        };
         }
         public void Delete(CreditBindingModel model)
         {

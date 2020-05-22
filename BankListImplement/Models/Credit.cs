@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BankBusinessLogic.Enums;
+using System;
 
 namespace BankListImplement.Models
 {
@@ -8,8 +7,7 @@ namespace BankListImplement.Models
     {
         public int Id { get; set; }
         public string CreditName { get; set; }
-        public int CountMoney { get; set; }
-        public DateTime? DateImplement { get; set; }
-        public string currency { get; set; }
+        public CreditType Type { get; set; }
+        public String Date { get; set; }        
     }
 }
