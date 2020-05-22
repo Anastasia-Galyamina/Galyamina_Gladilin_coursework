@@ -9,7 +9,7 @@ namespace BankBusinessLogic.BindingModels
     {
         public int? Id { get; set; }
         public string CreditName { get; set; }        
-        public DateTime? Date { get; set; }
+        public String Date { get; set; }
         public CreditType Type { get; set; }
     }
 }
