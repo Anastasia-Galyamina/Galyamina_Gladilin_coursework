@@ -16,6 +16,6 @@ namespace BankBusinessLogic.ViewModels
         [DataMember]
         [DisplayName("Клиент")]
         public string ClientFIO { get; set; }
-        public Dictionary<int, (string, int, DateTime?, string)> DealCredit { get; set; }
+        public Dictionary<int, (string, int)> DealCredit { get; set; }
     }
 }

@@ -59,7 +59,7 @@ namespace BankListImplement.Implements
                 {
                     if (model.DealCredits.ContainsKey(source.DealCredits[i].CreditId))
                     {
-                        source.DealCredits[i].Count = model.DealCredits[source.DealCredits[i].CreditId].Item2;
+                        source.DealCredits[i].CreditName = model.DealCredits[source.DealCredits[i].CreditId].Item2;
                         source.DealCredits[i].dateImplement = model.DealCredits[source.DealCredits[i].CreditId].Item3;
                         source.DealCredits[i].currency = model.DealCredits[source.DealCredits[i].CreditId].Item4;
                         model.DealCredits.Remove(source.DealCredits[i].CreditId);

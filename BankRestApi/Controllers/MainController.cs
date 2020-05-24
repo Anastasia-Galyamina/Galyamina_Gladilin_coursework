@@ -47,9 +47,9 @@ namespace BankRestApi.Controllers
             {
                 Id = model.Id,
                 CreditName = model.CreditName,
-                CountMoney = model.CountMoney,
+                /*CountMoney = model.CountMoney,
                 currency = model.currency,
-                DateImplement = model.DateImplement
+                DateImplement = model.DateImplement*/
             };
         }
     }

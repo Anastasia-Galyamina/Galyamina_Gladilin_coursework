@@ -1,7 +1,6 @@
 ﻿using BankBusinessLogic.BindingModels;
 using BankBusinessLogic.Interfaсes;
 using BankBusinessLogic.ViewModels;
-using BankDataBaseImplement.Migrations;
 using BankDataBaseImplement.Models;
 using System;
 using System.Collections.Generic;

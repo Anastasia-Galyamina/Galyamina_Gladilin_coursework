@@ -40,3 +40,9 @@ C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\Ba
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.AssemblyInfo.cs
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.dll
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.pdb
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\bin\Debug\netstandard2.0\BankListImplement.deps.json
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\bin\Debug\netstandard2.0\BankListImplement.dll
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\bin\Debug\netstandard2.0\BankListImplement.pdb
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\bin\Debug\netstandard2.0\BankBusinessLogic.dll
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\bin\Debug\netstandard2.0\BankBusinessLogic.pdb
+C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankListImplement\obj\Debug\netstandard2.0\BankListImplement.csproj.CopyComplete

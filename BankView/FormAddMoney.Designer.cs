@@ -1,4 +1,4 @@
-﻿namespace BankView
+﻿namespace BankViewClient
 {
     partial class FormAddMoney
     {

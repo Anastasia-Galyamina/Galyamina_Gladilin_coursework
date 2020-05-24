@@ -1,5 +1,4 @@
-﻿using BankBusinessLogic.BindingModels;
-using BankBusinessLogic.Interfaсes;
+﻿using BankBusinessLogic.Interfaсes;
 
 namespace BankBusinessLogic.BusinessLogicAdmin
 {
@@ -10,15 +9,14 @@ namespace BankBusinessLogic.BusinessLogicAdmin
         {
             this.logic = logic;
         }
-        public void AddCredit(CreditBindingModel model)
+        public bool CheckData(string savedPassword, string enteredPassword)
         {
-            logic.CreateOrUpdate(new CreditBindingModel
+            if(savedPassword == enteredPassword)
             {
-                Id = model.Id,
-                CreditName = model.CreditName,
-                Date = model.Date,
-                Type = model.Type
-            }); ;
+                return true;
+            }
+
+            return false;
         }
     }
 }

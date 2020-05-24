@@ -1,14 +1,7 @@
-﻿using BankBusinessLogic.BindingModels;
-using BankBusinessLogic.Interfaсes;
+﻿using BankBusinessLogic.Interfaсes;
 using BankBusinessLogic.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 
@@ -23,7 +16,7 @@ namespace BankViewClient
             get { return Convert.ToInt32(comboBox.SelectedValue); }
             set { comboBox.SelectedValue = value; }
         }
-        public string ComponentName { get { return comboBox.Text; } }
+        public string CreditName { get { return comboBox.Text; } }
         public int Count
         {
             get { return Convert.ToInt32(textBoxCount.Text); }

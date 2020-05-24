@@ -10,6 +10,6 @@ namespace BankBusinessLogic.BindingModels
         public string DealName { set; get; }
         public int ClientId { get; set; }    
         public DateTime Date { get; set; }
-        public Dictionary<int, (string, int, DateTime?,string)> DealCredits { get; set; }
+        public Dictionary<int, (string, int)> DealCredits { get; set; }
     }
 }

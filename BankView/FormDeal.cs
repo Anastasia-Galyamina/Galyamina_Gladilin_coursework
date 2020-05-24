@@ -4,16 +4,10 @@ using BankBusinessLogic.Interfaсes;
 using BankBusinessLogic.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 
-namespace BankView
+namespace BankViewClient
 {
     public partial class FormDeal : Form
     {
@@ -23,15 +17,14 @@ namespace BankView
         private readonly IDealLogic logic;
         private readonly ICreditLogic creditLogic;
         private int? id;
-        private Dictionary<int, (string, int, DateTime?, string)> DealCredit;
+        private Dictionary<int, (string, int)> DealCredit;
         public FormDeal(IDealLogic dealLogic, ICreditLogic creditLogic)
         {
             InitializeComponent();
             dataGridView.Columns.Add("Id", "Id");
-            dataGridView.Columns.Add("CreditName", "Кредит");
-            dataGridView.Columns.Add("Count", "Cумма");
-            dataGridView.Columns.Add("DateImplement", "Дата погашения");
-            dataGridView.Columns.Add("currency", "Валюта");
+            dataGridView.Columns.Add("CreditName", "Название кредита");
+            dataGridView.Columns.Add("Date", "Срок погашения");
+            dataGridView.Columns.Add("Type", "Тип");            
             dataGridView.Columns[0].Visible = false;
             dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.logic = dealLogic;
@@ -46,11 +39,11 @@ namespace BankView
             {
                 if (DealCredit.ContainsKey(form.Id))
                 {
-                    DealCredit[form.Id] = (form.CreditName, form.Count,form.date,form.currency);
+                    DealCredit[form.Id] = (form.CreditName, form.Count);
                 }
                 else
                 {
-                    DealCredit.Add(form.Id, (form.CreditName, form.Count, form.date, form.currency));
+                    DealCredit.Add(form.Id, (form.CreditName, form.Count));
                 }
                 LoadData();
             }
@@ -81,7 +74,7 @@ namespace BankView
             }
             else
             {
-                DealCredit = new Dictionary<int, (string, int, DateTime?, string)>();
+                DealCredit = new Dictionary<int, (string, int)>();
             }
         }
 
@@ -94,7 +87,7 @@ namespace BankView
                     dataGridView.Rows.Clear();
                     foreach (var pc in DealCredit)
                     {
-                        dataGridView.Rows.Add(new object[] { pc.Key, pc.Value.Item1, pc.Value.Item2,pc.Value.Item3,pc.Value.Item4 });
+                        dataGridView.Rows.Add(new object[] { pc.Key, pc.Value.Item1, pc.Value.Item2});
                     }
                 }
             }

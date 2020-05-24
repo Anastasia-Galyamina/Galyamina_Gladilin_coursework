@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BankBusinessLogic.BindingModels
+﻿namespace BankBusinessLogic.BindingModels
 {
     public class ClientBindingModel
     {

@@ -1,4 +1,4 @@
-﻿namespace BankView
+﻿namespace BankViewClient
 {
     partial class FormDeal
     {
@@ -34,9 +34,6 @@
             this.labelName = new System.Windows.Forms.Label();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonRef = new System.Windows.Forms.Button();
-            this.buttonDel = new System.Windows.Forms.Button();
-            this.buttonUpd = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -44,7 +41,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(596, 409);
+            this.buttonCancel.Location = new System.Drawing.Point(178, 372);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 12;
@@ -53,7 +50,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(515, 409);
+            this.buttonSave.Location = new System.Drawing.Point(75, 372);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 10;
@@ -65,7 +62,7 @@
             // 
             this.textBoxName.Location = new System.Drawing.Point(137, 18);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(212, 20);
+            this.textBoxName.Size = new System.Drawing.Size(212, 22);
             this.textBoxName.TabIndex = 9;
             // 
             // labelName
@@ -81,13 +78,9 @@
             // groupBox
             // 
             this.groupBox.Controls.Add(this.dataGridView);
-            this.groupBox.Controls.Add(this.buttonRef);
-            this.groupBox.Controls.Add(this.buttonDel);
-            this.groupBox.Controls.Add(this.buttonUpd);
-            this.groupBox.Controls.Add(this.buttonAdd);
-            this.groupBox.Location = new System.Drawing.Point(68, 89);
+            this.groupBox.Location = new System.Drawing.Point(25, 48);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(673, 303);
+            this.groupBox.Size = new System.Drawing.Size(565, 303);
             this.groupBox.TabIndex = 6;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "кредиты";
@@ -95,46 +88,18 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(20, 20);
+            this.dataGridView.Location = new System.Drawing.Point(20, 21);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(525, 265);
             this.dataGridView.TabIndex = 4;
             // 
-            // buttonRef
-            // 
-            this.buttonRef.Location = new System.Drawing.Point(581, 120);
-            this.buttonRef.Name = "buttonRef";
-            this.buttonRef.Size = new System.Drawing.Size(75, 23);
-            this.buttonRef.TabIndex = 3;
-            this.buttonRef.Text = "Обновить";
-            this.buttonRef.UseVisualStyleBackColor = true;
-            this.buttonRef.Click += new System.EventHandler(this.buttonRef_Click);
-            // 
-            // buttonDel
-            // 
-            this.buttonDel.Location = new System.Drawing.Point(581, 91);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(75, 23);
-            this.buttonDel.TabIndex = 2;
-            this.buttonDel.Text = "Удалить";
-            this.buttonDel.UseVisualStyleBackColor = true;
-            // 
-            // buttonUpd
-            // 
-            this.buttonUpd.Location = new System.Drawing.Point(581, 62);
-            this.buttonUpd.Name = "buttonUpd";
-            this.buttonUpd.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpd.TabIndex = 1;
-            this.buttonUpd.Text = "Изменить";
-            this.buttonUpd.UseVisualStyleBackColor = true;
-            // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(581, 33);
+            this.buttonAdd.Location = new System.Drawing.Point(381, 19);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(129, 23);
             this.buttonAdd.TabIndex = 0;
-            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.Text = "Добавить кредит";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -142,11 +107,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(621, 450);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelName);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.groupBox);
             this.Name = "FormDeal";
             this.Text = "FormDeal";
@@ -166,9 +132,6 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.Button buttonRef;
-        private System.Windows.Forms.Button buttonDel;
-        private System.Windows.Forms.Button buttonUpd;
         private System.Windows.Forms.Button buttonAdd;
     }
 }
