@@ -272,3 +272,9 @@ C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\Ba
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.csproj.CopyComplete
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.FormDeal.resources
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.FormAddCredit.resources
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.FormAddMoney.resources
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.FormCredits.resources
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.FormDeal.resources
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.FormMain.resources
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankView\obj\Debug\BankViewClient.FormMoney.resources

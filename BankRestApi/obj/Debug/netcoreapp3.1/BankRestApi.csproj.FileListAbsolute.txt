@@ -256,3 +256,10 @@ C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\Ba
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.genruntimeconfig.cache
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankRestApi\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\BankRestApi\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.csprojAssemblyReference.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.csproj.CoreCompileInputs.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.AssemblyInfoInputs.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.AssemblyInfo.cs
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.dll
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.pdb

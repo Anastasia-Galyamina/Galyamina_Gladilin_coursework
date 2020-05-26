@@ -253,20 +253,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BankBusinessLogic\BankBusinessLogic.csproj">
-      <Project>{5082d459-d39d-49d7-984b-f368b7235374}</Project>
-      <Name>BankBusinessLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BankDataBaseImplement\BankDataBaseImplement.csproj">
-      <Project>{f4475dbe-42ea-44eb-a50a-b5f668f6a89b}</Project>
-      <Name>BankDataBaseImplement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BankListImplement\BankListImplement.csproj">
-      <Project>{ca64d695-a042-44e6-a4ea-3a90eaa7e7fb}</Project>
-      <Name>BankListImplement</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

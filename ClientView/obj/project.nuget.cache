@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Rj9jBZqCHnQV4VePoQXcXOHAYuw+jgQ9FajfQ/wlGbK/P+xe2+CbFq6hdrguapucXLxs8WYeGHnn5H5mT0gs6w==",
+  "dgSpecHash": "qYZQrqQD8kylPLIgYUuPFR7EbgHV2MFeyKt1Z/YlZpH8U2/bQPm0ikg65YvF56v7q1Wm/eQzy/CAFDl+HZ8IfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\ClientView\\ClientView.csproj",
+  "projectFilePath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework\\ClientView\\ClientView.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\anast\\.nuget\\packages\\documentformat.openxml\\2.11.0\\documentformat.openxml.2.11.0.nupkg.sha512",
-    "C:\\Users\\anast\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\anast\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+    "C:\\Users\\anast\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

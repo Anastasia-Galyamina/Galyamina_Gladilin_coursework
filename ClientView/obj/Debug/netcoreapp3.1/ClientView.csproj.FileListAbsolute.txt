@@ -34,3 +34,9 @@ C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\Cl
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.dll
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.pdb
 C:\Users\anast\Source\Repos\Anastasia-Galyamina\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.genruntimeconfig.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.csprojAssemblyReference.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.csproj.CoreCompileInputs.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.AssemblyInfoInputs.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.AssemblyInfo.cs
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.dll
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework\ClientView\obj\Debug\netcoreapp3.1\ClientView.pdb

@@ -1,5 +1,5 @@
 ﻿using BankBusinessLogic.BindingModels;
-using BankBusinessLogic.Interfaсes;
+using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.ViewModels;
 using BankDataBaseImplement.Models;
 using System;
@@ -15,28 +15,44 @@ namespace BankDataBaseImplement.Implements
         {
             using (var context = new BankDataBase())
             {
-                Money element = context.Money.FirstOrDefault(rec =>
-               rec.currency == model.currency && rec.Id != model.Id);
-                if (element != null)
+                Money money = context.Money.FirstOrDefault(rec =>
+               rec.Currency == model.Currency && rec.Id != model.Id);
+                if (money != null)
                 {
                     throw new Exception("Уже есть такая валюта");
                 }
                 if (model.Id.HasValue)
                 {
-                    element = context.Money.FirstOrDefault(rec => rec.Id ==
-                   model.Id);
-                    if (element == null)
+                    money = context.Money.FirstOrDefault(rec => rec.Id == model.Id);
+                    if (money == null)
                     {
-                        throw new Exception("Элемент не найден");
+                        throw new Exception("Валюта не найдена");
                     }
                 }
                 else
                 {
-                    element = new Money();
-                    context.Money.Add(element);
+                    money = new Money();
+                    context.Money.Add(money);
                 }
-                element.currency = model.currency;
+                money.Currency = model.Currency;
                 context.SaveChanges();
+            }
+        }
+
+        public void Delete(MoneyBindingModel model)
+        {
+            using (var context = new BankDataBase())
+            {
+                Money element = context.Money.FirstOrDefault(rec => rec.Id == model.Id);
+                if (element != null)
+                {
+                    context.Money.Remove(element);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("Валюта не найдена");
+                }
             }
         }
 
@@ -49,14 +65,10 @@ namespace BankDataBaseImplement.Implements
                 .Select(rec => new MoneyViewModel
                 {
                     Id = rec.Id,
-                    currency = rec.currency
+                    Currency = rec.Currency
                 })
                 .ToList();
             }
-        }
-        public void Delete(MoneyBindingModel model)
-        {
-            throw new NotImplementedException();
         }
     }
 }

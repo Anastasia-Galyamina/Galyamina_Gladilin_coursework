@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj": {}
+    "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj": {
+    "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj",
         "projectName": "BankBusinessLogic",
-        "projectPath": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj",
+        "projectPath": "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj",
         "packagesPath": "C:\\Users\\anast\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anast\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,10 +38,6 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "DocumentFormat.OpenXml": {
-              "target": "Package",
-              "version": "[2.11.0, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -63,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj": {
+    "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj",
+        "projectUniqueName": "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj",
         "projectName": "BankDataBaseImplement",
-        "projectPath": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj",
+        "projectPath": "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\BankDataBaseImplement.csproj",
         "packagesPath": "C:\\Users\\anast\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\obj\\",
+        "outputPath": "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankDataBaseImplement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anast\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -86,8 +82,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\anast\\Source\\Repos\\Anastasia-Galyamina\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj"
+              "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\anast\\source\\repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj"
               }
             }
           }
