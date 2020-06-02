@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iR75lG5ika73HhlU4yqkan1rfpE6pWpBvHmy7KeHjhiaOO1Prn098bur0hfeTBNdXv5DsUalzJhkpBSwyt5WCQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankClientView\\BankClientView.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NULS\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
