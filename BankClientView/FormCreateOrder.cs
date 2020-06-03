@@ -11,6 +11,7 @@ namespace BankAdminView
 {                                                      
     public partial class FormCreateOrder : Form        
     {
+        private DateTime datePlus;
         public int Id
         {
             get { return Convert.ToInt32(comboBoxСredit.SelectedValue); }
@@ -19,7 +20,7 @@ namespace BankAdminView
         public string CreditName { get { return comboBoxСredit.Text; } }
         public DateTime date
         {
-            get { return DateTime.Now; }
+            get { return datePlus; }
         }
         public FormCreateOrder()                       
         {                                              
@@ -47,6 +48,19 @@ namespace BankAdminView
                 MessageBox.Show("Выберите кредит", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
+            }
+            List<CreditViewModel> list = APIClient.GetRequest<List<CreditViewModel>>("api/main/getcreditlist");
+            switch (list[comboBoxСredit.SelectedIndex].Term)
+            {
+                case "Краткосрочный(1 год)":
+                    datePlus = DateTime.Now.AddYears(1);
+                    break;
+                case "Среднесрочный(3 года)":
+                    datePlus = DateTime.Now.AddYears(3);
+                    break;
+                case "Долгосрочный(4 года)":
+                    datePlus = DateTime.Now.AddYears(4);
+                    break;
             }
             try
             {
