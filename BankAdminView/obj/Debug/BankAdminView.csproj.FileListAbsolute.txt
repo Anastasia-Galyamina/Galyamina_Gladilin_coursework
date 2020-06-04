@@ -188,3 +188,4 @@ C:\Users\NULS\Desktop\BankBusinessLogic\BankAdminView\obj\Debug\BankAdminView.Fo
 C:\Users\NULS\Desktop\BankBusinessLogic\BankAdminView\obj\Debug\BankAdminView.testForm.resources
 C:\Users\NULS\Desktop\BankBusinessLogic\BankAdminView\bin\Debug\Newtonsoft.Json.dll
 C:\Users\NULS\Desktop\BankBusinessLogic\BankAdminView\bin\Debug\Newtonsoft.Json.xml
+C:\Users\NULS\Desktop\BankBusinessLogic\BankAdminView\obj\Debug\BankAdminView.Formtest2.resources

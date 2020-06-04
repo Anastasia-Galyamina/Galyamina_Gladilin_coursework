@@ -21,12 +21,14 @@ namespace BankRestApi.Controllers
         private readonly ICreditLogic _credit;
         private readonly MainLogic _main;
         private readonly IReservMoney _reserveLogic;
-        public MainController(IDealLogic order, ICreditLogic furniture, MainLogic main, IReservMoney reserveLogic)
+        private readonly ReportLogic _report;
+        public MainController(IDealLogic order, ICreditLogic furniture, MainLogic main, IReservMoney reserveLogic, ReportLogic report)
         {
             _deal = order;
             _credit = furniture;
             _main = main;
             _reserveLogic = reserveLogic;
+            _report = report;
         }
         [HttpGet]
         public List<CreditModel> GetCreditList() => _credit.Read(null)?.Select(rec =>
@@ -54,6 +56,8 @@ namespace BankRestApi.Controllers
         [HttpPost]
         public void ReservMoney(ReservedMoneyBindingModel model) =>
       _reserveLogic.CreateOrUpdate(model);
+        [HttpPost]
+        public void DocCreditDial(ReportBindingModel model) => _report.DocCreditDeal(model);
         private CreditModel Convert(CreditViewModel model)
         {
             if (model == null) return null;
@@ -63,19 +67,6 @@ namespace BankRestApi.Controllers
                 CreditName = model.CreditName,
                 Price = model.Price,
                 Term = model.Term
-            };
-        }
-        private DealBindingModel Convert(DealViewModel model)
-        {
-            if (model == null) return null;
-            return new DealBindingModel
-            {
-               Id = model.Id,
-               ClientId = model.ClientId,
-               ClientFIO = model.ClientFIO,
-               DealCredits = model.DealCredits,
-               DealName = model.DealName,
-               Status = model.Status
             };
         }
     }

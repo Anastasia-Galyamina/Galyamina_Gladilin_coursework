@@ -10,9 +10,9 @@ D:\проекты\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\B
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.deps.json
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.dll
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.pdb
-C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.AssemblyInfoInputs.cache
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.AssemblyInfo.cs
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.dll
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.pdb
+C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\NULS\Desktop\BankBusinessLogic\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.csprojAssemblyReference.cache

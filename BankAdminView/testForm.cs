@@ -28,5 +28,10 @@ namespace BankAdminView
         {
             throw new NotImplementedException();
         }
+
+        private void отчетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

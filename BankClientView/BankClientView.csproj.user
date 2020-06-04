@@ -17,6 +17,9 @@
     <Compile Update="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormReportDealsCredits.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormReservedMoney.cs">
       <SubType>Form</SubType>
     </Compile>

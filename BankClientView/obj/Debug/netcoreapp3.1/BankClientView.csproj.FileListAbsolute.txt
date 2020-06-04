@@ -19,3 +19,4 @@ C:\Users\NULS\Desktop\BankBusinessLogic\BankClientView\obj\Debug\netcoreapp3.1\B
 C:\Users\NULS\Desktop\BankBusinessLogic\BankClientView\obj\Debug\netcoreapp3.1\BankAdminView.FormCreateOrder.resources
 C:\Users\NULS\Desktop\BankBusinessLogic\BankClientView\obj\Debug\netcoreapp3.1\BankAdminView.FormDeal.resources
 C:\Users\NULS\Desktop\BankBusinessLogic\BankClientView\obj\Debug\netcoreapp3.1\BankClientView.csproj.GenerateResource.cache
+C:\Users\NULS\Desktop\BankBusinessLogic\BankClientView\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll

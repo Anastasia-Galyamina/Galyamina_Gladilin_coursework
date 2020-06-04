@@ -131,3 +131,5 @@ C:\Users\NULS\Desktop\BankBusinessLogic\BankRestApi\bin\Debug\netcoreapp3.1\Micr
 C:\Users\NULS\Desktop\BankBusinessLogic\BankRestApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\NULS\Desktop\BankBusinessLogic\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.csproj.CoreCompileInputs.cache
 C:\Users\NULS\Desktop\BankBusinessLogic\BankRestApi\obj\Debug\netcoreapp3.1\BankRestApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\NULS\Desktop\BankBusinessLogic\BankRestApi\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\NULS\Desktop\BankBusinessLogic\BankRestApi\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll

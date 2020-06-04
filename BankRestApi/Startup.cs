@@ -36,6 +36,7 @@ namespace BankRestApi
             services.AddTransient<IClientLogic, ClientLogic>();
             services.AddTransient<IDealLogic, DealLogic>();
             services.AddTransient<MainLogic>();
+            services.AddTransient<ReportLogic>();
             services.AddControllers();
         }
 

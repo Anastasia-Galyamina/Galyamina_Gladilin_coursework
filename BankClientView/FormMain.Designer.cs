@@ -33,8 +33,9 @@ namespace BankClientView
             this.UpdateDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshOrderListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.зарезервированныеДеньгиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,8 @@ namespace BankClientView
             this.UpdateDataToolStripMenuItem,
             this.CreateOrderToolStripMenuItem,
             this.RefreshOrderListToolStripMenuItem,
-            this.зарезервированныеДеньгиToolStripMenuItem});
+            this.зарезервированныеДеньгиToolStripMenuItem,
+            this.отчетToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(928, 24);
@@ -73,6 +75,13 @@ namespace BankClientView
             this.RefreshOrderListToolStripMenuItem.Text = "Обновить список заказов";
             this.RefreshOrderListToolStripMenuItem.Click += new System.EventHandler(this.RefreshOrderListToolStripMenuItem_Click);
             // 
+            // зарезервированныеДеньгиToolStripMenuItem
+            // 
+            this.зарезервированныеДеньгиToolStripMenuItem.Name = "зарезервированныеДеньгиToolStripMenuItem";
+            this.зарезервированныеДеньгиToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
+            this.зарезервированныеДеньгиToolStripMenuItem.Text = "Зарезервированные деньги";
+            this.зарезервированныеДеньгиToolStripMenuItem.Click += new System.EventHandler(this.зарезервированныеДеньгиToolStripMenuItem_Click);
+            // 
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
@@ -85,12 +94,12 @@ namespace BankClientView
             this.dataGridView.Size = new System.Drawing.Size(928, 336);
             this.dataGridView.TabIndex = 1;
             // 
-            // зарезервированныеДеньгиToolStripMenuItem
+            // отчетToolStripMenuItem
             // 
-            this.зарезервированныеДеньгиToolStripMenuItem.Name = "зарезервированныеДеньгиToolStripMenuItem";
-            this.зарезервированныеДеньгиToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
-            this.зарезервированныеДеньгиToolStripMenuItem.Text = "Зарезервированные деньги";
-            this.зарезервированныеДеньгиToolStripMenuItem.Click += new System.EventHandler(this.зарезервированныеДеньгиToolStripMenuItem_Click);
+            this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
+            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.отчетToolStripMenuItem.Text = "Отчет";
+            this.отчетToolStripMenuItem.Click += new System.EventHandler(this.отчетToolStripMenuItem_Click);
             // 
             // testForm
             // 
@@ -117,5 +126,6 @@ namespace BankClientView
         private System.Windows.Forms.ToolStripMenuItem RefreshOrderListToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.ToolStripMenuItem зарезервированныеДеньгиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
     }
 }
