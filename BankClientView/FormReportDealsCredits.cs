@@ -54,30 +54,34 @@ namespace BankClientView
         }
         private void buttonOk_Click(object sender, EventArgs e)
         {         
-            //		FileName	"D:\\CreditDeal.docx"	string
             APIClient.PostRequest($"api/main/doccreditdial", new ReportBindingModel
             {
                 FileName = "D:\\CreditDeal.docx",
                 ClientId = Program.Client.Id,
                 DealsId = ids
             });
+            APIClient.PostRequest($"api/main/sendmessage", new ReportBindingModel
+            {
+                FileName = "D:\\CreditDeal.docx",
+                Email = Program.Client.Email
+            });
             MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // отправитель - устанавливаем адрес и отображаемое в письме имя
-            MailAddress from = new MailAddress("labwork15kafis@gmail.com");
-            // кому отправляем
-            MailAddress to = new MailAddress("samsonov_1958@bk.ru");
-            // создаем объект сообщения
-            MailMessage m = new MailMessage(from, to);
-            m.Attachments.Add(new Attachment("D:\\CreditDeal.docx"));
-            // письмо представляет код html
-            m.IsBodyHtml = true;
-            // адрес smtp-сервера и порт, с которого будем отправлять письмо
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            // логин и пароль
-            smtp.Credentials = new NetworkCredential("labwork15kafis@gmail.com", "passlab15");
-            smtp.EnableSsl = true;
-            smtp.Send(m);
         }
 
+        private void buttonOkExcel_Click(object sender, EventArgs e)
+        {
+            APIClient.PostRequest($"api/main/exelcreditdial", new ReportBindingModel
+            {
+                FileName = "D:\\CreditDeal.xlsx",
+                ClientId = Program.Client.Id,
+                DealsId = ids
+            });
+            APIClient.PostRequest($"api/main/sendmessage", new ReportBindingModel
+            {
+                FileName = "D:\\CreditDeal.xlsx",
+                Email = Program.Client.Email
+            });
+            MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

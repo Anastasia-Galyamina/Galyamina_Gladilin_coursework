@@ -26,5 +26,10 @@ namespace BankAdminView
         {
 
         }
+
+        private void buttonOkExcel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

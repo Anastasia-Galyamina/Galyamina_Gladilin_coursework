@@ -54,10 +54,15 @@ namespace BankRestApi.Controllers
         public void CreateDeal(DealBindingModel model) =>
        _main.CreateOrder(model);
         [HttpPost]
+        public void SendMessage(ReportBindingModel model) =>
+       _report.SendMessage(model);
+        [HttpPost]
         public void ReservMoney(ReservedMoneyBindingModel model) =>
       _reserveLogic.CreateOrUpdate(model);
         [HttpPost]
         public void DocCreditDial(ReportBindingModel model) => _report.DocCreditDeal(model);
+        [HttpPost]
+        public void ExelCreditDial(ReportBindingModel model) => _report.ExelCreditDeal(model);
         private CreditModel Convert(CreditViewModel model)
         {
             if (model == null) return null;

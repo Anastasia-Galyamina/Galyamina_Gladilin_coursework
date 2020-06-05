@@ -20,7 +20,7 @@ namespace BankDataBaseImplement.Implements
                 {
                     try
                     {
-                        Deal element = context.Deals.FirstOrDefault(rec => rec.DealName == model.DealName && rec.Id != model.Id);
+                        Deal element = context.Deals.FirstOrDefault(rec => rec.Id == model.Id);
                         if (element != null)
                         {
                             throw new Exception("Уже есть сделка с таким названием");

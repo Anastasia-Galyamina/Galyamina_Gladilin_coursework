@@ -34,16 +34,17 @@ namespace BankClientView
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
+            this.buttonOkExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(553, 392);
+            this.buttonOk.Location = new System.Drawing.Point(255, 398);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(102, 27);
+            this.buttonOk.Size = new System.Drawing.Size(159, 26);
             this.buttonOk.TabIndex = 0;
-            this.buttonOk.Text = "Отправить";
+            this.buttonOk.Text = "Отправить в формате docx";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
@@ -73,11 +74,22 @@ namespace BankClientView
             this.textBox.Size = new System.Drawing.Size(139, 218);
             this.textBox.TabIndex = 4;
             // 
+            // buttonOkExcel
+            // 
+            this.buttonOkExcel.Location = new System.Drawing.Point(436, 398);
+            this.buttonOkExcel.Name = "buttonOkExcel";
+            this.buttonOkExcel.Size = new System.Drawing.Size(159, 26);
+            this.buttonOkExcel.TabIndex = 5;
+            this.buttonOkExcel.Text = "Отправить в формате Excel";
+            this.buttonOkExcel.UseVisualStyleBackColor = true;
+            this.buttonOkExcel.Click += new System.EventHandler(this.buttonOkExcel_Click);
+            // 
             // Formtest2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonOkExcel);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView);
@@ -89,12 +101,12 @@ namespace BankClientView
             this.PerformLayout();
 
         }
-
         #endregion
 
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button buttonOkExcel;
     }
 }

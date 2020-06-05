@@ -5,6 +5,8 @@ using BankBusinessLogic.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 
 namespace BankBusinessLogic.BusnessLogic
@@ -56,6 +58,27 @@ namespace BankBusinessLogic.BusnessLogic
                 Title = "Сделки",
                 Deals = GetDeals(model)
             });
+        }
+        public void ExelCreditDeal(ReportBindingModel model)
+        {
+            SaveToExcelClient.CreateDoc(new ExcelInfo
+            {
+                FileName = model.FileName,
+                Title = "Сделки",
+                Deals = GetDeals(model)
+            });
+        }
+        public void SendMessage(ReportBindingModel model)
+        {
+            MailAddress from = new MailAddress("labwork15kafis@gmail.com");
+            MailAddress to = new MailAddress(model.Email);
+            MailMessage m = new MailMessage(from, to);
+            m.Attachments.Add(new Attachment(model.FileName));
+            m.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("labwork15kafis@gmail.com", "passlab15");
+            smtp.EnableSsl = true;
+            smtp.Send(m);
         }
     }
 }

@@ -9,5 +9,6 @@ namespace BankBusinessLogic.BindingModels
         public string FileName { get; set; }
         public int ClientId { get; set; }
         public List<int> DealsId { get; set; }
+        public string Email { get; set; } 
     }
 }
