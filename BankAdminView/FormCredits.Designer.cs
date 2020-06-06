@@ -1,6 +1,6 @@
 ﻿namespace BankAdminView
 {
-    partial class FormFurnitures
+    partial class FormCredits
     {
         /// <summary>
         /// Required designer variable.
@@ -84,7 +84,7 @@
             this.buttonRef.UseVisualStyleBackColor = true;
             this.buttonRef.Click += new System.EventHandler(this.buttonRef_Click);
             // 
-            // FormProducts
+            // FormCredits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,8 +94,8 @@
             this.Controls.Add(this.buttonUpd);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView);
-            this.Name = "FormProducts";
-            this.Text = "Изделия";
+            this.Name = "FormCredits";
+            this.Text = "Кредиты";
             this.Load += new System.EventHandler(this.FormProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);

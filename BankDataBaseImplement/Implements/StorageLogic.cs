@@ -12,8 +12,7 @@ using System.Text;
 namespace BankDataBaseImplement.Implements
 {
     public class StorageLogic : IStorageLogic
-    {
-
+    {        
         public void CreateOrUpdate(StorageBindingModel model)
         {
             using (var context = new BankDataBase())
@@ -45,7 +44,7 @@ namespace BankDataBaseImplement.Implements
         {
             using (var context = new BankDataBase())
             {
-                context.StorageMoney.RemoveRange(context.StorageMoney.Where(rec => rec.StorageId == model.Id));
+               // context.StorageMoney.RemoveRange(context.StorageMoney.Where(rec => rec.StorageId == model.Id));
                 Storage element = context.Storages.FirstOrDefault(rec => rec.Id == model.Id);
                 if (element != null)
                 {
@@ -58,7 +57,6 @@ namespace BankDataBaseImplement.Implements
                 }
             }
         }
-
         public List<StorageViewModel> Read(StorageBindingModel model)
         {
             using (var context = new BankDataBase())
@@ -70,11 +68,11 @@ namespace BankDataBaseImplement.Implements
                     Id = rec.Id,
                     StorageName = rec.StorageName,
                     StoragedMoney = context.StorageMoney.Include(recSM => recSM.Money)
-                                                           .Where(recSM => recSM.StorageId == rec.Id)
+                                                           // .Where(recSM => recSM.StorageId == rec.Id)
                                                            .ToDictionary(recSM => recSM.Money.Currency, recSM => recSM.Count)
                 }).ToList();
             }
-        }
+        }       
         private const string urlPattern = "http://rate-exchange-1.appspot.com/currency?from={0}&to={1}";
         public decimal CurrencyConversion(decimal amount, string fromCurrency, string toCurrency)
         {

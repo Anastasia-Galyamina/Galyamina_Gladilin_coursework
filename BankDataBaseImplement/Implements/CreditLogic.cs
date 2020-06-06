@@ -23,7 +23,7 @@ namespace BankDataBaseImplement.Implements
                         Credit element = context.Credits.FirstOrDefault(rec => rec.CreditName == model.CreditName && rec.Id != model.Id);
                         if (element != null)
                         {
-                            throw new Exception("Уже есть изделие с таким названием");
+                            throw new Exception("Уже есть кредит с таким названием");
                         }
                         if (model.Id.HasValue)
                         {
@@ -40,6 +40,7 @@ namespace BankDataBaseImplement.Implements
                         }
                         element.CreditName = model.CreditName;
                         element.Price = model.Price;
+                        element.currency = model.Currency;
                         element.Term = model.Term;
                         context.SaveChanges();
                         if (model.Id.HasValue)
@@ -117,6 +118,7 @@ namespace BankDataBaseImplement.Implements
                     CreditName = rec.CreditName,
                     Price = rec.Price,
                     Term = rec.Term,
+                    Currency = rec.currency,
                     CreditMoney = context.CreditMoney.Include(recPC => recPC.Money)
                                                            .Where(recPC => recPC.CreditId == rec.Id)
                                                            .ToDictionary(recPC => recPC.MoneyId, recPC => (recPC.Money?.Currency, recPC.Count))

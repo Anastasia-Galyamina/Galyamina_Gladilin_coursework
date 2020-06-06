@@ -22,11 +22,13 @@ namespace BankAdminView
         public new IUnityContainer Container { get; set; }
         public int Id { set { id = value; } }
         private readonly IDealLogic logic;
-        private readonly ICreditLogic creditLogic;
-        private readonly MainLogic mainLogic;
+        //private readonly ICreditLogic creditLogic;
+        //private readonly MainLogic mainLogic;
+        private readonly IClientLogic clientLogic;
+
         private int? id;
         private Dictionary<int, (string, DateTime?)> DealCredits;
-        public FormDeal(IDealLogic dealLogic, ICreditLogic creditLogic, MainLogic mainLogic)
+        public FormDeal(IDealLogic dealLogic, IClientLogic clientLogic)//, ICreditLogic creditLogic, MainLogic mainLogic
         {
             InitializeComponent();
             dataGridView.Columns.Add("Id", "Id");
@@ -35,8 +37,13 @@ namespace BankAdminView
             dataGridView.Columns[0].Visible = false;
             dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.logic = dealLogic;
-            this.creditLogic = creditLogic;
-            this.mainLogic = mainLogic;
+            // this.creditLogic = creditLogic;
+            //this.mainLogic = mainLogic;
+            this.clientLogic = clientLogic;
+            var list = clientLogic.Read(null);
+            comboBoxClient.DataSource = list;
+            comboBoxClient.DisplayMember = "ClientFIO";
+            comboBoxClient.SelectedItem = null;
             LoadData();
         }
 
@@ -70,6 +77,7 @@ namespace BankAdminView
                     if (view != null)
                     {
                         textBoxName.Text = view.DealName;
+                        comboBoxClient.SelectedItem = view.ClientFIO;
                         DealCredits = view.DealCredits;
                         LoadData();
                     }
@@ -124,9 +132,11 @@ namespace BankAdminView
             {
                 logic.CreateOrUpdate( new DealBindingModel
                 {
+                   // ClientId = comboBoxClient.
                     DealName = textBoxName.Text,
                     Status = DealStatus.Принят,
                     Id = id,
+                    ClientFIO = comboBoxClient.Text,
                     DealCredits= DealCredits
                    
                 });

@@ -1,5 +1,6 @@
 ﻿using BankBusinessLogic.BindingModels;
 using BankBusinessLogic.InterFaces;
+using BankDataBaseImplement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,14 +38,22 @@ namespace BankAdminView
         {
             try
             {
-                var list = logic.Read(null);
-                if (list != null)
+                
+                using (var context = new BankDataBase())
                 {
-                    dataGridViewStorage.DataSource = list;
-                    dataGridViewStorage.Columns[0].Visible = false;
-                    dataGridViewStorage.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    dataGridViewStorage.Columns[2].Visible = false;
+                    var list = context.StorageMoney.ToList();
+                    if (list != null)
+                    {
+                        dataGridViewStorage.DataSource = list;
+                        //dataGridViewStorage.Columns[0].Visible = false;
+                       // dataGridViewStorage.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        //dataGridViewStorage.Columns[2].Visible = false;
+                    }
+
                 }
+
+                    //var list = logic.Read(null);
+                
             }
             catch (Exception ex)
             {

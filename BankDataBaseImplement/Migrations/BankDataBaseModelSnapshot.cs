@@ -60,6 +60,9 @@ namespace BankDataBaseImplement.Migrations
                     b.Property<string>("Term")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("currency")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Credits");
@@ -110,6 +113,9 @@ namespace BankDataBaseImplement.Migrations
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
+
+                    b.Property<bool?>("reserved")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -215,14 +221,12 @@ namespace BankDataBaseImplement.Migrations
                     b.Property<int>("MoneyId")
                         .HasColumnType("int");
 
-                    b.Property<int>("StorageId")
-                        .HasColumnType("int");
+                    b.Property<decimal?>("Reserved")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("MoneyId");
-
-                    b.HasIndex("StorageId");
 
                     b.ToTable("StorageMoney");
                 });
@@ -280,12 +284,6 @@ namespace BankDataBaseImplement.Migrations
                     b.HasOne("BankDataBaseImplement.Models.Money", "Money")
                         .WithMany("StorageMoney")
                         .HasForeignKey("MoneyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BankDataBaseImplement.Models.Storage", "Storage")
-                        .WithMany("StorageMoney")
-                        .HasForeignKey("StorageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

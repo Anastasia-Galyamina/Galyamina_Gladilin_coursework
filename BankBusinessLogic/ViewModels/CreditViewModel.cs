@@ -14,6 +14,9 @@ namespace BankBusinessLogic.ViewModels
         public decimal Price { get; set; }
         [DisplayName("Срок погашения")]
         public string Term { get; set; }
+
+        [DisplayName("Валюта")]
+        public string Currency { get; set; }
         public Dictionary<int, (string, int)> CreditMoney { get; set; }
     }
 }

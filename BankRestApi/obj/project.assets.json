@@ -8299,23 +8299,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NULS\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\anast\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankRestApi\\BankRestApi.csproj",
+      "projectUniqueName": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankRestApi\\BankRestApi.csproj",
       "projectName": "BankRestApi",
-      "projectPath": "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankRestApi\\BankRestApi.csproj",
-      "packagesPath": "C:\\Users\\NULS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankRestApi\\obj\\",
+      "projectPath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankRestApi\\BankRestApi.csproj",
+      "packagesPath": "C:\\Users\\anast\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankRestApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\NULS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\anast\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8328,11 +8324,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankBusinessLogic\\BankBusinessLogic.csproj": {
-              "projectPath": "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankBusinessLogic\\BankBusinessLogic.csproj"
+            "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankBusinessLogic\\BankBusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankBusinessLogic\\BankBusinessLogic.csproj"
             },
-            "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankDataBaseImplement\\BankDataBaseImplement.csproj": {
-              "projectPath": "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankDataBaseImplement\\BankDataBaseImplement.csproj"
+            "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankDataBaseImplement\\BankDataBaseImplement.csproj": {
+              "projectPath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankDataBaseImplement\\BankDataBaseImplement.csproj"
             }
           }
         }
@@ -8373,7 +8369,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

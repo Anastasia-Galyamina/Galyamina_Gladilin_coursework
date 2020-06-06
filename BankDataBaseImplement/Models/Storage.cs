@@ -11,7 +11,7 @@ namespace BankDataBaseImplement.Models
         public int Id { set; get; }
         [Required]
         public string StorageName { set; get; }
-        [ForeignKey("StorageId")]
-        public virtual List<StorageMoney> StorageMoney { set; get; }
+       // [ForeignKey("StorageId")]
+       // public virtual List<StorageMoney> StorageMoney { set; get; }
     }
 }

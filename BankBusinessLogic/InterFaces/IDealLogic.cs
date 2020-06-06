@@ -11,5 +11,6 @@ namespace BankBusinessLogic.InterFaces
         List<DealViewModel> Read(DealBindingModel model);
         void CreateOrUpdate(DealBindingModel model);
         void Delete(DealBindingModel model);
+        void ReserveMoney(int id);
     }
 }

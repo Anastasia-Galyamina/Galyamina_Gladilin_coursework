@@ -19,6 +19,8 @@ namespace BankBusinessLogic.ViewModels
         [DataMember]
         [DisplayName("Клиент")]
         public string ClientFIO { get; set; }
+        [DisplayName("Зарезервированы деньги")]
+        public bool? reserved { get; set; }
         public Dictionary<int, (string, DateTime?)> DealCredits { get; set; }
         public int CreditId { get; set; }
     }

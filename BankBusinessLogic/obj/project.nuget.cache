@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "SgpcLndlaZUHQv9V5oiLlh/7oBJrITNTDd80vShYoEcYDq4fdYYhV3cZbiBh6gOu6y1zTO/D+bAv4d2M01/SJw==",
+  "dgSpecHash": "39EL5jqcnFwxurynSR73uj/GtVARmWavK2RftyH+F6zy3qb/+5azqvidPTj++P3UlSUJQYv3cd67TzDjb0LoeA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NULS\\Desktop\\BankBusinessLogic\\BankBusinessLogic\\BankBusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework3\\BankBusinessLogic\\BankBusinessLogic.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\NULS\\.nuget\\packages\\documentformat.openxml\\2.11.0\\documentformat.openxml.2.11.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\NULS\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+    "C:\\Users\\anast\\.nuget\\packages\\documentformat.openxml\\2.11.0\\documentformat.openxml.2.11.0.nupkg.sha512",
+    "C:\\Users\\anast\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\anast\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\anast\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -7,14 +7,14 @@ using Unity;
 
 namespace BankAdminView
 {
-    public partial class FormComponent : System.Windows.Forms.Form
+    public partial class FormCurrency : System.Windows.Forms.Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
         public int Id { set { id = value; } }
         private readonly IMoneyLogic logic;
         private int? id;
-        public FormComponent(IMoneyLogic logic)
+        public FormCurrency(IMoneyLogic logic)
         {
             InitializeComponent();
             this.logic = logic;

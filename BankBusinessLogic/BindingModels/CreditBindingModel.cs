@@ -10,6 +10,7 @@ namespace BankBusinessLogic.BindingModels
         public string CreditName { get; set; }
         public decimal Price { get; set; }
         public string Term { get; set; }
+        public string Currency { get; set; }
         public Dictionary<int, (string, int)> CreditMoney { get; set; }
     }
 }

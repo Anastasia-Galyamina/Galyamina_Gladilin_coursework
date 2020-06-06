@@ -13,6 +13,7 @@ namespace BankDataBaseImplement.Models
         public string CreditName { get; set; }
         [Required]
         public decimal Price { get; set; }
+        public String currency { get; set; }
         public string Term { get; set; }
         [ForeignKey("CreditId")]
         public virtual List<DealCredits> DealCredits { get; set; }

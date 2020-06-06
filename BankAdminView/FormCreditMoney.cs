@@ -8,7 +8,7 @@ using Unity;
 
 namespace BankAdminView
 {
-    public partial class FormFurnitureComponent : Form
+    public partial class FormCreditMoney : Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
@@ -26,7 +26,7 @@ namespace BankAdminView
                 textBoxCount.Text = value.ToString();
             }
         }
-        public FormFurnitureComponent(IMoneyLogic logic)
+        public FormCreditMoney(IMoneyLogic logic)
         {
             InitializeComponent();
             List<MoneyViewModel> list = logic.Read(null);

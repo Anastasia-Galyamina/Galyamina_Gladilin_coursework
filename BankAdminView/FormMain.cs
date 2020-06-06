@@ -36,9 +36,9 @@ namespace BankAdminView
                     dataGridView.DataSource = list;
                     dataGridView.Columns[0].Visible = false;
                     dataGridView.Columns[1].Visible = false;
-                    dataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    dataGridView.Columns[3].Visible = true;
-                    dataGridView.Columns[5].Visible = false;
+                    dataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;                    
+                    dataGridView.Columns[6].Visible = false;
+                    dataGridView.Columns[7].Visible = false;
                 }
             }
             catch (Exception ex)
@@ -47,23 +47,23 @@ namespace BankAdminView
                MessageBoxIcon.Error);
             }
         }
-        private void компонентыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void деньгиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormComponents>();
+            var form = Container.Resolve<FormMoney>();
             form.ShowDialog();
         }
-        private void изделияToolStripMenuItem_Click(object sender, EventArgs e)
+        private void кредитыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormFurniture>();
+            var form = Container.Resolve<FormCredit>();
             form.ShowDialog();
         }
-        private void buttonCreateOrder_Click(object sender, EventArgs e)
+        private void buttonCreateDeal_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormDeal>();
             form.ShowDialog();
             LoadData();
         }
-        private void buttonTakeOrderInWork_Click(object sender, EventArgs e)
+        private void buttonSignDeal_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 1)
             {
@@ -85,9 +85,9 @@ namespace BankAdminView
             LoadData();
         }
 
-        private void списокИзделийToolStripMenuItem_Click(object sender, EventArgs e)
+        private void КредитыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormFurnitures>();
+            var form = Container.Resolve<FormCredits>();
             form.ShowDialog();
         }
 
@@ -109,7 +109,7 @@ namespace BankAdminView
             form.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonOpenDeal_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 1)
             {

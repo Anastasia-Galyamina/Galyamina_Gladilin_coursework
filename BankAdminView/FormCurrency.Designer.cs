@@ -1,6 +1,6 @@
 ﻿namespace BankAdminView
 {
-    partial class FormComponent
+    partial class FormCurrency
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -68,10 +68,10 @@
             // 
             this.textBoxName.Location = new System.Drawing.Point(88, 22);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(260, 20);
+            this.textBoxName.Size = new System.Drawing.Size(260, 22);
             this.textBoxName.TabIndex = 3;
             // 
-            // FormComponent
+            // FormCurrency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,8 +80,8 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
-            this.Name = "FormComponent";
-            this.Text = "Компонент";
+            this.Name = "FormCurrency";
+            this.Text = "Валюта";
             this.Load += new System.EventHandler(this.FormComponent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

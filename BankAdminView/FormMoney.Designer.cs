@@ -1,6 +1,6 @@
 ﻿namespace BankAdminView
 {
-    partial class FormComponents
+    partial class FormMoney
     {
         /// <summary>
         /// Required designer variable.
@@ -84,18 +84,18 @@
             this.dataGridView.Size = new System.Drawing.Size(532, 429);
             this.dataGridView.TabIndex = 4;
             // 
-            // FormComponents
+            // FormMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(687, 450);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.buttonRef);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonUpd);
             this.Controls.Add(this.buttonAdd);
-            this.Name = "FormComponents";
-            this.Text = "Компоненты";
+            this.Name = "FormMoney";
+            this.Text = "Деньги";
             this.Load += new System.EventHandler(this.FormComponents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);

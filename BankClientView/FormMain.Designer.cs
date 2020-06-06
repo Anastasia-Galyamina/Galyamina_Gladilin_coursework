@@ -75,12 +75,12 @@ namespace BankClientView
             this.RefreshOrderListToolStripMenuItem.Text = "Обновить список заказов";
             this.RefreshOrderListToolStripMenuItem.Click += new System.EventHandler(this.RefreshOrderListToolStripMenuItem_Click);
             // 
-            // зарезервированныеДеньгиToolStripMenuItem
+            // зарезервироватьДеньгиToolStripMenuItem
             // 
-            this.зарезервированныеДеньгиToolStripMenuItem.Name = "зарезервированныеДеньгиToolStripMenuItem";
+            this.зарезервированныеДеньгиToolStripMenuItem.Name = "зарезервироватьДеньгиToolStripMenuItem";
             this.зарезервированныеДеньгиToolStripMenuItem.Size = new System.Drawing.Size(171, 20);
-            this.зарезервированныеДеньгиToolStripMenuItem.Text = "Зарезервированные деньги";
-            this.зарезервированныеДеньгиToolStripMenuItem.Click += new System.EventHandler(this.зарезервированныеДеньгиToolStripMenuItem_Click);
+            this.зарезервированныеДеньгиToolStripMenuItem.Text = "Зарезервировать деньги";
+            this.зарезервированныеДеньгиToolStripMenuItem.Click += new System.EventHandler(this.зарезервироватьДеньгиToolStripMenuItem_Click);
             // 
             // dataGridView
             // 

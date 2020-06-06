@@ -1,6 +1,6 @@
 ﻿namespace BankAdminView
 {
-    partial class FormFurniture
+    partial class FormCredit
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,10 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelTerm = new System.Windows.Forms.Label();
             this.comboBoxterm = new System.Windows.Forms.ComboBox();
+            this.comboBoxCurrency = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxSum = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -51,12 +55,12 @@
             this.groupBox.Controls.Add(this.buttonDel);
             this.groupBox.Controls.Add(this.buttonUpd);
             this.groupBox.Controls.Add(this.buttonAdd);
-            this.groupBox.Location = new System.Drawing.Point(12, 76);
+            this.groupBox.Location = new System.Drawing.Point(13, 180);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(673, 303);
+            this.groupBox.Size = new System.Drawing.Size(673, 233);
             this.groupBox.TabIndex = 0;
             this.groupBox.TabStop = false;
-            this.groupBox.Text = "Компоненты";
+            this.groupBox.Text = "Деньги";
             // 
             // dataGridView
             // 
@@ -120,12 +124,12 @@
             // 
             this.textBoxName.Location = new System.Drawing.Point(81, 5);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(212, 20);
+            this.textBoxName.Size = new System.Drawing.Size(212, 22);
             this.textBoxName.TabIndex = 3;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(459, 396);
+            this.buttonSave.Location = new System.Drawing.Point(467, 419);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 4;
@@ -135,7 +139,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(540, 396);
+            this.buttonCancel.Location = new System.Drawing.Point(548, 419);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
@@ -161,11 +165,50 @@
             this.comboBoxterm.Size = new System.Drawing.Size(212, 21);
             this.comboBoxterm.TabIndex = 7;
             // 
-            // FormFurniture
+            // comboBoxCurrency
+            // 
+            this.comboBoxCurrency.FormattingEnabled = true;
+            this.comboBoxCurrency.Location = new System.Drawing.Point(81, 60);
+            this.comboBoxCurrency.Name = "comboBoxCurrency";
+            this.comboBoxCurrency.Size = new System.Drawing.Size(212, 21);
+            this.comboBoxCurrency.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Валюта";
+            // 
+            // textBoxSum
+            // 
+            this.textBoxSum.Location = new System.Drawing.Point(81, 87);
+            this.textBoxSum.Name = "textBoxSum";
+            this.textBoxSum.Size = new System.Drawing.Size(212, 22);
+            this.textBoxSum.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(3, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Сумма";
+            // 
+            // FormCredit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 454);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxSum);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBoxCurrency);
             this.Controls.Add(this.comboBoxterm);
             this.Controls.Add(this.labelTerm);
             this.Controls.Add(this.buttonCancel);
@@ -173,8 +216,8 @@
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.groupBox);
-            this.Name = "FormFurniture";
-            this.Text = "Изделие";
+            this.Name = "FormCredit";
+            this.Text = "Кредит";
             this.Load += new System.EventHandler(this.FormProduct_Load);
             this.groupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -197,5 +240,9 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelTerm;
         private System.Windows.Forms.ComboBox comboBoxterm;
+        private System.Windows.Forms.ComboBox comboBoxCurrency;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxSum;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -16,6 +16,7 @@ namespace BankDataBaseImplement.Models
         public string DealName { get; set; }
         [Required]
         public DealStatus Status { get; set; }
+        public bool? reserved { get; set; }
         public virtual List<DealCredits> DealCredits { get; set; }
     }
 }

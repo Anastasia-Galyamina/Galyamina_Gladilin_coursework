@@ -8,12 +8,12 @@ using BankBusinessLogic.BindingModels;
 
 namespace BankAdminView
 {
-    public partial class FormFurnitures : Form
+    public partial class FormCredits : Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly ICreditLogic  logic;
-        public FormFurnitures(ICreditLogic logic)
+        public FormCredits(ICreditLogic logic)
         {
             InitializeComponent();
             this.logic = logic;
@@ -46,7 +46,7 @@ namespace BankAdminView
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormFurniture>();
+            var form = Container.Resolve<FormCredit>();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
@@ -56,7 +56,7 @@ namespace BankAdminView
         {
             if (dataGridView.SelectedRows.Count == 1)
             {
-                var form = Container.Resolve<FormFurniture>();
+                var form = Container.Resolve<FormCredit>();
                 form.Id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
                 if (form.ShowDialog() == DialogResult.OK)
                 {

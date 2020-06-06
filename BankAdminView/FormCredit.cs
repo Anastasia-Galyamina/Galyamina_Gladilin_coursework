@@ -11,16 +11,17 @@ using Unity;
 
 namespace BankAdminView
 {
-    public partial class FormFurniture : Form
+    public partial class FormCredit : Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
         public int Id { set { id = value; } }
         private readonly ICreditLogic logic;
+        private readonly IMoneyLogic logicM;
         private int? id;
         private Dictionary<int, (string, int)> productComponents;
 
-        public FormFurniture(ICreditLogic service)
+        public FormCredit(ICreditLogic service, IMoneyLogic logicM)
         {
             InitializeComponent();
             dataGridView.Columns.Add("Id", "Id");
@@ -29,8 +30,16 @@ namespace BankAdminView
             dataGridView.Columns[0].Visible = false;
             dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.logic = service;
+            this.logicM = logicM;
             List<string> list = new List<string>() { "Краткосрочный(1 год)", "Среднесрочный(3 года)", "Долгосрочный(4 года)"};
             comboBoxterm.DataSource = list;
+            comboBoxterm.SelectedItem = null;
+            var listM = logicM.Read(null);
+            comboBoxCurrency.DisplayMember = "Currency";
+            //comboBoxCurrency.ValueMember = "Id";
+            comboBoxCurrency.DataSource = listM;
+            comboBoxCurrency.SelectedItem = null;
+
         }
         private void FormProduct_Load(object sender, EventArgs e)
         {
@@ -46,6 +55,7 @@ namespace BankAdminView
                     {
                         textBoxName.Text = view.CreditName;
                         comboBoxterm.Text = view.Term;
+                        comboBoxCurrency.SelectedItem = view.Currency;
                         productComponents = view.CreditMoney;
                         LoadData();
                     }
@@ -88,7 +98,7 @@ namespace BankAdminView
                MessageBoxIcon.Error);
                 return;
             }
-            var form = Container.Resolve<FormFurnitureComponent>();
+            var form = Container.Resolve<FormCreditMoney>();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 if (productComponents.ContainsKey(form.Id))
@@ -106,7 +116,7 @@ namespace BankAdminView
         {
             if (dataGridView.SelectedRows.Count == 1)
             {
-                var form = Container.Resolve<FormFurnitureComponent>();
+                var form = Container.Resolve<FormCreditMoney>();
                 int id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
                 form.Id = id;
                 form.Count = productComponents[id].Item2;
@@ -151,18 +161,30 @@ namespace BankAdminView
                MessageBoxIcon.Error);
                 return;
             }
+            if (string.IsNullOrEmpty(textBoxSum.Text))
+            {
+                MessageBox.Show("Заполните сумму кредита", "Ошибка", MessageBoxButtons.OK,
+               MessageBoxIcon.Error);
+                return;
+            }
             if (string.IsNullOrEmpty(comboBoxterm.Text))
             {
                 MessageBox.Show("Выберете срок кредита", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
-            if (productComponents == null || productComponents.Count == 0)
+            if (string.IsNullOrEmpty(comboBoxCurrency.Text))
             {
-                MessageBox.Show("Заполните компоненты", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Выберете валюту", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
+            /* if (productComponents == null || productComponents.Count == 0)
+             {
+                 MessageBox.Show("Заполните компоненты", "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                 return;
+             }*/
             try
             {
                 int price = 0;
@@ -174,8 +196,10 @@ namespace BankAdminView
                 {
                     Id = id,
                     CreditName = textBoxName.Text,
-                    Term = comboBoxterm .Text,
-                    Price = Convert.ToDecimal(productComponents[price].Item2),
+                    Term = comboBoxterm.Text,
+                    Currency = comboBoxCurrency.Text,
+                    Price = Convert.ToInt32(textBoxSum.Text),
+                   //Price = Convert.ToDecimal(productComponents[price].Item2),
                     CreditMoney = productComponents
                 });
                 MessageBox.Show("Сохранение прошло успешно", "Сообщение",

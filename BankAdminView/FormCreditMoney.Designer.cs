@@ -1,6 +1,6 @@
 ﻿namespace BankAdminView
 {
-    partial class FormFurnitureComponent
+    partial class FormCreditMoney
     {
         /// <summary>
         /// Required designer variable.
@@ -42,9 +42,9 @@
             this.labelCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelCom.Location = new System.Drawing.Point(-1, 9);
             this.labelCom.Name = "labelCom";
-            this.labelCom.Size = new System.Drawing.Size(81, 17);
+            this.labelCom.Size = new System.Drawing.Size(58, 17);
             this.labelCom.TabIndex = 0;
-            this.labelCom.Text = "Компонент";
+            this.labelCom.Text = "Валюта";
             // 
             // labelKol
             // 
@@ -52,15 +52,15 @@
             this.labelKol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelKol.Location = new System.Drawing.Point(-1, 34);
             this.labelKol.Name = "labelKol";
-            this.labelKol.Size = new System.Drawing.Size(86, 17);
+            this.labelKol.Size = new System.Drawing.Size(50, 17);
             this.labelKol.TabIndex = 1;
-            this.labelKol.Text = "Количество";
+            this.labelKol.Text = "Сумма";
             // 
             // textBoxCount
             // 
             this.textBoxCount.Location = new System.Drawing.Point(86, 35);
             this.textBoxCount.Name = "textBoxCount";
-            this.textBoxCount.Size = new System.Drawing.Size(236, 20);
+            this.textBoxCount.Size = new System.Drawing.Size(236, 22);
             this.textBoxCount.TabIndex = 2;
             // 
             // comboBoxComponent
@@ -91,7 +91,7 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // FormProductComponent
+            // FormCreditMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +102,8 @@
             this.Controls.Add(this.textBoxCount);
             this.Controls.Add(this.labelKol);
             this.Controls.Add(this.labelCom);
-            this.Name = "FormProductComponent";
-            this.Text = "Компонент изделия";
+            this.Name = "FormCreditMoney";
+            this.Text = "Валюта для кредита";
             this.ResumeLayout(false);
             this.PerformLayout();
 

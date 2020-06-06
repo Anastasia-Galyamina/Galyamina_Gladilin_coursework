@@ -110,7 +110,7 @@ namespace BankDataBaseImplement.Implements
         {
             using (var context = new BankDataBase())
             {
-                return context.Deals.Where(rec => model == null || (rec.Id == model.Id && model.Id.HasValue)||
+                return context.Deals.Where(rec => model == null || (rec.Id == model.Id && model.Id.HasValue) ||
                 (model.ClientId.HasValue && rec.ClientId == model.ClientId))
                 .ToList()
                 .Select(rec => new DealViewModel
@@ -119,11 +119,94 @@ namespace BankDataBaseImplement.Implements
                     ClientId = rec.ClientId,
                     DealName = rec.DealName,
                     ClientFIO = rec.ClientFIO,
-                    Status= rec.Status,
+                    Status = rec.Status,
+                    reserved = rec.reserved,
                     DealCredits = context.DealCredits.Include(recPC => recPC.Credit)
                                                            .Where(recPC => recPC.DealId == rec.Id)
                                                            .ToDictionary(recPC => recPC.CreditId, recPC => (recPC.Credit?.CreditName, recPC.dateImplement))
                 }).ToList();
+            }
+        }
+
+
+        public bool HaveCurrency(string currency)
+        {
+            using (var context = new BankDataBase())
+            {
+                foreach (var storageMoney in context.StorageMoney)
+                {
+                    foreach (var money in context.Money)
+                    {
+                        if (money.Id == storageMoney.MoneyId && money.Currency == currency)
+                        {                            
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+        }
+
+        public void ReserveMoney(string currency, decimal count)
+        {
+            using (var context = new BankDataBase())
+            {
+                if(!HaveCurrency(currency))
+                {
+                    StorageMoney money = new StorageMoney();
+                    context.StorageMoney.Add(money);                  
+                    money.MoneyId = context.Money.Where(rec => rec.Currency == currency).FirstOrDefault().Id;
+                    money.Reserved = count;
+                    money.Count = 0;                                                                           
+                } 
+                else
+                {
+                    foreach(var storageMoney in context.StorageMoney)
+                    {
+                        foreach (var money in context.Money)
+                        {
+                            if (money.Id == storageMoney.MoneyId && money.Currency == currency)
+                            {
+                               storageMoney.Reserved += count;
+                            }
+                        }                        
+                     }
+                }
+                context.SaveChanges();
+            }
+        }
+
+        public void ReserveMoney(int id)
+        {
+            //ищем id  кредитов с таким id сделки в таблице dealcredits
+            using (var context = new BankDataBase())
+            {
+                /*foreach (var deal in context.Deals)
+                {
+                    if (deal.Id == id)
+                    {
+                        if(deal.reserved == true)
+                        {
+                            MessageBox.Show("деньги уже зарезервированы");
+                        }
+                    }
+                        deal.reserved = true;
+                }*/
+                foreach (var deal in context.DealCredits)
+                {
+                    if (deal.DealId == id)
+                    {
+                        foreach (var credit in context.Credits)
+                        {
+                            if (deal.CreditId == credit.Id)
+                            {
+                                ReserveMoney(credit.currency, credit.Price);
+                            }
+                        }
+                    }
+                }
+                
+                context.SaveChanges();
             }
         }
     }

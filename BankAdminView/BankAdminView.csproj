@@ -150,17 +150,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormComponent.cs">
+    <Compile Include="FormCurrency.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormComponent.Designer.cs">
-      <DependentUpon>FormComponent.cs</DependentUpon>
+    <Compile Include="FormCurrency.Designer.cs">
+      <DependentUpon>FormCurrency.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormComponents.cs">
+    <Compile Include="FormMoney.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormComponents.Designer.cs">
-      <DependentUpon>FormComponents.cs</DependentUpon>
+    <Compile Include="FormMoney.Designer.cs">
+      <DependentUpon>FormMoney.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCreateOrder.cs">
       <SubType>Form</SubType>
@@ -174,23 +174,23 @@
     <Compile Include="FormDeal.Designer.cs">
       <DependentUpon>FormDeal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFurniture.cs">
+    <Compile Include="FormCredit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFurniture.Designer.cs">
-      <DependentUpon>FormFurniture.cs</DependentUpon>
+    <Compile Include="FormCredit.Designer.cs">
+      <DependentUpon>FormCredit.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFurnitureComponent.cs">
+    <Compile Include="FormCreditMoney.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFurnitureComponent.Designer.cs">
-      <DependentUpon>FormFurnitureComponent.cs</DependentUpon>
+    <Compile Include="FormCreditMoney.Designer.cs">
+      <DependentUpon>FormCreditMoney.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFurnitures.cs">
+    <Compile Include="FormCredits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFurnitures.Designer.cs">
-      <DependentUpon>FormFurnitures.cs</DependentUpon>
+    <Compile Include="FormCredits.Designer.cs">
+      <DependentUpon>FormCredits.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -230,11 +230,11 @@
     <Compile Include="testForm.Designer.cs">
       <DependentUpon>testForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormComponent.resx">
-      <DependentUpon>FormComponent.cs</DependentUpon>
+    <EmbeddedResource Include="FormCurrency.resx">
+      <DependentUpon>FormCurrency.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormComponents.resx">
-      <DependentUpon>FormComponents.cs</DependentUpon>
+    <EmbeddedResource Include="FormMoney.resx">
+      <DependentUpon>FormMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateOrder.resx">
       <DependentUpon>FormCreateOrder.cs</DependentUpon>
@@ -242,14 +242,14 @@
     <EmbeddedResource Include="FormDeal.resx">
       <DependentUpon>FormDeal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFurniture.resx">
-      <DependentUpon>FormFurniture.cs</DependentUpon>
+    <EmbeddedResource Include="FormCredit.resx">
+      <DependentUpon>FormCredit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFurnitureComponent.resx">
-      <DependentUpon>FormFurnitureComponent.cs</DependentUpon>
+    <EmbeddedResource Include="FormCreditMoney.resx">
+      <DependentUpon>FormCreditMoney.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFurnitures.resx">
-      <DependentUpon>FormFurnitures.cs</DependentUpon>
+    <EmbeddedResource Include="FormCredits.resx">
+      <DependentUpon>FormCredits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
