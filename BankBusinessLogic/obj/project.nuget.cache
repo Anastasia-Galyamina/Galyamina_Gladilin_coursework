@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "Mm64BkUAYdJoC08Vm6Y2PRAoIuKzfHBNdQHLG22ZjaLeGkXAvbaNFcffl06mQKBiTbmea2aAu524QFKPmn4MoA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NULS\\Desktop\\Galyamina_Gladilin_coursework-ver-14\\BankBusinessLogic\\BankBusinessLogic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NULS\\.nuget\\packages\\documentformat.openxml\\2.11.0\\documentformat.openxml.2.11.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\NULS\\.nuget\\packages\\pdfsharp-migradoc\\1.50.5147\\pdfsharp-migradoc.1.50.5147.nupkg.sha512",
+    "C:\\Users\\NULS\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"PDFsharp-MigraDoc 1.50.5147\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETStandard,Version=v2.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "PDFsharp-MigraDoc",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}
