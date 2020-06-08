@@ -162,11 +162,11 @@
     <Compile Include="FormMoney.Designer.cs">
       <DependentUpon>FormMoney.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCreateOrder.cs">
+    <Compile Include="FormDealCredit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCreateOrder.Designer.cs">
-      <DependentUpon>FormCreateOrder.cs</DependentUpon>
+    <Compile Include="FormDealCredit.Designer.cs">
+      <DependentUpon>FormDealCredit.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDeal.cs">
       <SubType>Form</SubType>
@@ -198,23 +198,17 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRequest.Designer.cs">
+      <DependentUpon>FormRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStorage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormStorage.Designer.cs">
       <DependentUpon>FormStorage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormStorageAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormStorageAdd.Designer.cs">
-      <DependentUpon>FormStorageAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormStorageComonent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormStorageComonent.Designer.cs">
-      <DependentUpon>FormStorageComonent.cs</DependentUpon>
     </Compile>
     <Compile Include="Formtest2.cs">
       <SubType>Form</SubType>
@@ -236,8 +230,8 @@
     <EmbeddedResource Include="FormMoney.resx">
       <DependentUpon>FormMoney.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCreateOrder.resx">
-      <DependentUpon>FormCreateOrder.cs</DependentUpon>
+    <EmbeddedResource Include="FormDealCredit.resx">
+      <DependentUpon>FormDealCredit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeal.resx">
       <DependentUpon>FormDeal.cs</DependentUpon>
@@ -254,14 +248,11 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRequest.resx">
+      <DependentUpon>FormRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStorage.resx">
       <DependentUpon>FormStorage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormStorageAdd.resx">
-      <DependentUpon>FormStorageAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormStorageComonent.resx">
-      <DependentUpon>FormStorageComonent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formtest2.resx">
       <DependentUpon>Formtest2.cs</DependentUpon>

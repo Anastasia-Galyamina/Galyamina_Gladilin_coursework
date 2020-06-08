@@ -17,31 +17,31 @@ namespace BankAdminView
         public new IUnityContainer Container { get; set; }
         public int Id { set { id = value; } }
         private readonly ICreditLogic logic;
-        private readonly IMoneyLogic logicM;
+       // private readonly IMoneyLogic logicM;
         private int? id;
-        private Dictionary<int, (string, int)> productComponents;
+       // private Dictionary<int, (string, int)> productComponents;
 
         public FormCredit(ICreditLogic service, IMoneyLogic logicM)
         {
             InitializeComponent();
-            dataGridView.Columns.Add("Id", "Id");
+            /*dataGridView.Columns.Add("Id", "Id");
             dataGridView.Columns.Add("ComponentName", "Компонент");
             dataGridView.Columns.Add("Count", "Количество");
             dataGridView.Columns[0].Visible = false;
-            dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
             this.logic = service;
-            this.logicM = logicM;
-            List<string> list = new List<string>() { "Краткосрочный(1 год)", "Среднесрочный(3 года)", "Долгосрочный(4 года)"};
+            //this.logicM = logicM;
+            List<string> list = new List<string>() { "Краткосрочный(1 год)", "Среднесрочный(3 года)", "Долгосрочный(4 года)"};          
             comboBoxterm.DataSource = list;
             comboBoxterm.SelectedItem = null;
             var listM = logicM.Read(null);
             comboBoxCurrency.DisplayMember = "Currency";
-            //comboBoxCurrency.ValueMember = "Id";
+            comboBoxCurrency.ValueMember = "Id";
             comboBoxCurrency.DataSource = listM;
             comboBoxCurrency.SelectedItem = null;
 
         }
-        private void FormProduct_Load(object sender, EventArgs e)
+        private void FormCredit_Load(object sender, EventArgs e)
         {
             if (id.HasValue)
             {
@@ -55,9 +55,10 @@ namespace BankAdminView
                     {
                         textBoxName.Text = view.CreditName;
                         comboBoxterm.Text = view.Term;
-                        comboBoxCurrency.SelectedItem = view.Currency;
-                        productComponents = view.CreditMoney;
-                        LoadData();
+                        comboBoxCurrency.Text = view.Currency;
+                        textBoxSum.Text = view.Price.ToString();
+                        // productComponents = view.CreditMoney;
+                        // LoadData();
                     }
                 }
                 catch (Exception ex)
@@ -68,10 +69,10 @@ namespace BankAdminView
             }
             else
             {
-                productComponents = new Dictionary<int, (string, int)>();
+                //productComponents = new Dictionary<int, (string, int)>();
             }
         }
-        private void LoadData()
+       /*private void LoadData()
         {
             try
             {
@@ -89,8 +90,8 @@ namespace BankAdminView
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
             }
-        }
-        private void buttonAdd_Click(object sender, EventArgs e)
+        }*/
+       /* private void buttonAdd_Click(object sender, EventArgs e)
         {
             if (dataGridView.Rows.Count == 2)
             {
@@ -151,7 +152,7 @@ namespace BankAdminView
         private void buttonRef_Click(object sender, EventArgs e)
         {
             LoadData();
-        }
+        }*/
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -187,20 +188,20 @@ namespace BankAdminView
              }*/
             try
             {
-                int price = 0;
+               /* int price = 0;
                 foreach(KeyValuePair<int, (string, int)> creditMoney in productComponents)
                 {
                     price = creditMoney.Key;
-                }
+                }*/
                 logic.CreateOrUpdate(new CreditBindingModel
                 {
                     Id = id,
                     CreditName = textBoxName.Text,
                     Term = comboBoxterm.Text,
-                    Currency = comboBoxCurrency.Text,
-                    Price = Convert.ToInt32(textBoxSum.Text),
+                    Currency = comboBoxCurrency.Text,                    
+                    Price = Convert.ToDecimal(textBoxSum.Text),
                    //Price = Convert.ToDecimal(productComponents[price].Item2),
-                    CreditMoney = productComponents
+                    //CreditMoney = productComponents
                 });
                 MessageBox.Show("Сохранение прошло успешно", "Сообщение",
                MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -1,6 +1,6 @@
 ﻿namespace BankAdminView
 {
-    partial class FormCreateOrder
+    partial class FormDealCredit
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,7 @@
             // buttonSave
             // 
             this.buttonSave.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSave.Location = new System.Drawing.Point(169, 106);
+            this.buttonSave.Location = new System.Drawing.Point(103, 52);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 3;
@@ -57,7 +57,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(250, 106);
+            this.buttonCancel.Location = new System.Drawing.Point(184, 52);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 4;
@@ -72,17 +72,17 @@
             this.comboBoxСredit.Size = new System.Drawing.Size(268, 21);
             this.comboBoxСredit.TabIndex = 6;
             // 
-            // FormCreateOrder
+            // FormAddCredit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 141);
+            this.ClientSize = new System.Drawing.Size(385, 92);
             this.Controls.Add(this.comboBoxСredit);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelCredit);
-            this.Name = "FormCreateOrder";
-            this.Text = "Заказ";
+            this.Name = "FormAddCredit";
+            this.Text = "Кредит в сделке";
             this.Load += new System.EventHandler(this.FormCreateOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

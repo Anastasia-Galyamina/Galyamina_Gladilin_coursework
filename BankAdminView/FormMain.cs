@@ -1,9 +1,6 @@
 ﻿using System;
-using System;
 using System.Windows.Forms;
 using Unity;
-using System.Collections.Generic;
-using BankAdminView;
 using BankBusinessLogic.BusnessLogic;
 using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.BindingModels;
@@ -54,7 +51,7 @@ namespace BankAdminView
         }
         private void кредитыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormCredit>();
+            var form = Container.Resolve<FormCredits>();
             form.ShowDialog();
         }
         private void buttonCreateDeal_Click(object sender, EventArgs e)
@@ -84,31 +81,13 @@ namespace BankAdminView
         {
             LoadData();
         }
-
-        private void КредитыToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormCredits>();
-            form.ShowDialog();
-        }
-
+       
         private void СкладыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormStorage>();
             form.ShowDialog();
         }
-
-        private void ButtonStorageAdd_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormStorageComonent>();
-            form.ShowDialog();
-        }
-
-        private void добавитьНаСкладToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormStorageComonent>();
-            form.ShowDialog();
-        }
-
+       
         private void buttonOpenDeal_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 1)
@@ -120,6 +99,12 @@ namespace BankAdminView
                     LoadData();
                 }
             }
+        }
+
+        private void заявкаНаДеньгиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormRequest>();
+            form.ShowDialog();
         }
     }
 }

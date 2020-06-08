@@ -19,7 +19,7 @@ namespace BankAdminView
             this.logic = logic;
 
         }
-        private void FormProducts_Load(object sender, EventArgs e)
+        private void FormCredits_Load(object sender, EventArgs e)
         {
             LoadData();
         }
@@ -32,10 +32,11 @@ namespace BankAdminView
                 {
                     dataGridView.DataSource = list;
                     dataGridView.Columns[0].Visible = false;
-                    dataGridView.Columns[1].Visible = true;
-                    dataGridView.Columns[2].Visible = true;
-                    dataGridView.Columns[3].Visible = true;
-                    dataGridView.Columns[4].Visible = false;
+                    dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    // dataGridView.Columns[1].Visible = true;
+                    // dataGridView.Columns[2].Visible = true;
+                    // dataGridView.Columns[3].Visible = true;
+                    dataGridView.Columns[5].Visible = false;
                 }
             }
             catch (Exception ex)

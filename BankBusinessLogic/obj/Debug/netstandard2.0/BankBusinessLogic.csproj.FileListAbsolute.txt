@@ -34,3 +34,11 @@ C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-ver-14\BankBusinessLogic\obj
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-ver-14\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.dll
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-ver-14\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.pdb
 C:\Users\NULS\Desktop\Galyamina_Gladilin_coursework-ver-14\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.deps.json
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.dll
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\bin\Debug\netstandard2.0\BankBusinessLogic.pdb
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.AssemblyInfoInputs.cache
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.AssemblyInfo.cs
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.dll
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.pdb
+C:\Users\anast\Source\Repos\Galyamina_Gladilin_coursework4\BankBusinessLogic\obj\Debug\netstandard2.0\BankBusinessLogic.csproj.CoreCompileInputs.cache

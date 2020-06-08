@@ -1,16 +1,9 @@
 ﻿using BankBusinessLogic.BindingModels;
-using BankBusinessLogic.BusnessLogic;
 using BankBusinessLogic.Enums;
 using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 
@@ -21,14 +14,12 @@ namespace BankAdminView
         [Dependency]
         public new IUnityContainer Container { get; set; }
         public int Id { set { id = value; } }
-        private readonly IDealLogic logic;
-        //private readonly ICreditLogic creditLogic;
-        //private readonly MainLogic mainLogic;
+        private readonly IDealLogic logic;        
         private readonly IClientLogic clientLogic;
 
         private int? id;
         private Dictionary<int, (string, DateTime?)> DealCredits;
-        public FormDeal(IDealLogic dealLogic, IClientLogic clientLogic)//, ICreditLogic creditLogic, MainLogic mainLogic
+        public FormDeal(IDealLogic dealLogic, IClientLogic clientLogic)
         {
             InitializeComponent();
             dataGridView.Columns.Add("Id", "Id");
@@ -36,20 +27,19 @@ namespace BankAdminView
             dataGridView.Columns.Add("DateImplement", "дата погашения");
             dataGridView.Columns[0].Visible = false;
             dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.logic = dealLogic;
-            // this.creditLogic = creditLogic;
-            //this.mainLogic = mainLogic;
+            this.logic = dealLogic;            
             this.clientLogic = clientLogic;
             var list = clientLogic.Read(null);
             comboBoxClient.DataSource = list;
             comboBoxClient.DisplayMember = "ClientFIO";
+            comboBoxClient.ValueMember = "Id";
             comboBoxClient.SelectedItem = null;
             LoadData();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormCreateOrder>();
+            var form = Container.Resolve<FormDealCredit>();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 if (DealCredits.ContainsKey(form.Id))
@@ -77,7 +67,7 @@ namespace BankAdminView
                     if (view != null)
                     {
                         textBoxName.Text = view.DealName;
-                        comboBoxClient.SelectedItem = view.ClientFIO;
+                        comboBoxClient.Text = view.ClientFIO;
                         DealCredits = view.DealCredits;
                         LoadData();
                     }
@@ -130,15 +120,15 @@ namespace BankAdminView
             }
             try
             {
-                logic.CreateOrUpdate( new DealBindingModel
+                logic.CreateOrUpdate(new DealBindingModel
                 {
-                   // ClientId = comboBoxClient.
+                    ClientId = Convert.ToInt32(comboBoxClient.SelectedValue),
                     DealName = textBoxName.Text,
                     Status = DealStatus.Принят,
                     Id = id,
                     ClientFIO = comboBoxClient.Text,
-                    DealCredits= DealCredits
-                   
+                    DealCredits = DealCredits
+
                 });
                 MessageBox.Show("Сохранение прошло успешно", "Сообщение",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -159,7 +149,22 @@ namespace BankAdminView
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
+            if (dataGridView.SelectedRows.Count == 1)
+            {
+                if (MessageBox.Show("Удалить запись", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        DealCredits.Remove(Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
+                    LoadData();
+                }
+            }
         }
     }
 }

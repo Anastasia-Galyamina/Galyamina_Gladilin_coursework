@@ -9,7 +9,7 @@ using Unity;
                                                        
 namespace BankAdminView
 {                                                      
-    public partial class FormCreateOrder : Form        
+    public partial class FormDealCredit : Form        
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
@@ -26,7 +26,7 @@ namespace BankAdminView
         {
             get { return datePlus; }
         }
-        public FormCreateOrder(ICreditLogic logicP, MainLogic logicM)                       
+        public FormDealCredit(ICreditLogic logicP, MainLogic logicM)                       
         {                                              
             InitializeComponent();
             this.logicP = logicP;

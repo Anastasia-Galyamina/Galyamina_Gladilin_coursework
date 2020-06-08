@@ -96,7 +96,7 @@
             this.Controls.Add(this.dataGridView);
             this.Name = "FormCredits";
             this.Text = "Кредиты";
-            this.Load += new System.EventHandler(this.FormProducts_Load);
+            this.Load += new System.EventHandler(this.FormCredits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 

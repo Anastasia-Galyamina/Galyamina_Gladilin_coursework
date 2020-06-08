@@ -41,9 +41,9 @@ namespace BankDataBaseImplement.Implements
                         element.CreditName = model.CreditName;
                         element.Price = model.Price;
                         element.currency = model.Currency;
-                        element.Term = model.Term;
+                        element.Term = model.Term;                       
                         context.SaveChanges();
-                        if (model.Id.HasValue)
+                        /*if (model.Id.HasValue)
                         {
                             var productComponents = context.CreditMoney.Where(rec => rec.CreditId == model.Id.Value).ToList();
                             context.CreditMoney.RemoveRange(productComponents.Where(rec => !model.CreditMoney.ContainsKey(rec.MoneyId)).ToList());
@@ -54,8 +54,8 @@ namespace BankDataBaseImplement.Implements
                                 model.CreditMoney.Remove(updateComponent.MoneyId);
                             }
                             context.SaveChanges();
-                        }
-                        foreach (var pc in model.CreditMoney)
+                        }*/
+                       /* foreach (var pc in model.CreditMoney)
                         {
                             context.CreditMoney.Add(new CreditMoney
                             {
@@ -64,7 +64,7 @@ namespace BankDataBaseImplement.Implements
                                 Count = pc.Value.Item2
                             });
                             context.SaveChanges();
-                        }
+                        }*/
                         transaction.Commit();
                     }
                     catch (Exception)
@@ -84,7 +84,7 @@ namespace BankDataBaseImplement.Implements
                 {
                     try
                     {
-                        context.CreditMoney.RemoveRange(context.CreditMoney.Where(rec => rec.CreditId == model.Id));
+                        //context.CreditMoney.RemoveRange(context.CreditMoney.Where(rec => rec.CreditId == model.Id));
                         Credit element = context.Credits.FirstOrDefault(rec => rec.Id == model.Id);
                         if (element != null)
                         {

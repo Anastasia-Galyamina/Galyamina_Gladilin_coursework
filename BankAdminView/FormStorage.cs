@@ -45,63 +45,21 @@ namespace BankAdminView
                     if (list != null)
                     {
                         dataGridViewStorage.DataSource = list;
-                        //dataGridViewStorage.Columns[0].Visible = false;
-                       // dataGridViewStorage.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        //dataGridViewStorage.Columns[2].Visible = false;
+                        dataGridViewStorage.Columns[0].Visible = false;
+                        dataGridViewStorage.Columns[1].Visible = false;
+                        dataGridViewStorage.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        
                     }
 
                 }
-
-                    //var list = logic.Read(null);
                 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormStorageAdd>();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                LoadData();
-            }
-        }
-
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewStorage.SelectedRows.Count == 1)
-            {
-                var form = Container.Resolve<FormStorageAdd>();
-                form.Id = Convert.ToInt32(dataGridViewStorage.SelectedRows[0].Cells[0].Value);
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    LoadData();
-                }
-            }
-        }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewStorage.SelectedRows.Count == 1)
-            {
-                if (MessageBox.Show("Удалить запись", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    int id = Convert.ToInt32(dataGridViewStorage.SelectedRows[0].Cells[0].Value);
-                    try
-                    {
-                        logic.Delete(new StorageBindingModel { Id = id });
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    LoadData();
-                }
-            }
-        }
+        }    
+        
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {

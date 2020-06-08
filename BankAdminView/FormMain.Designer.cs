@@ -38,6 +38,7 @@
             this.складыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonOpenDeal = new System.Windows.Forms.Button();
+            this.заявкаНаДеньгиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +76,8 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.справочникиToolStripMenuItem});
+            this.справочникиToolStripMenuItem,
+            this.заявкаНаДеньгиToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1004, 24);
@@ -131,6 +133,13 @@
             this.buttonOpenDeal.UseVisualStyleBackColor = true;
             this.buttonOpenDeal.Click += new System.EventHandler(this.buttonOpenDeal_Click);
             // 
+            // заявкаНаДеньгиToolStripMenuItem
+            // 
+            this.заявкаНаДеньгиToolStripMenuItem.Name = "заявкаНаДеньгиToolStripMenuItem";
+            this.заявкаНаДеньгиToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.заявкаНаДеньгиToolStripMenuItem.Text = "Заявка на деньги";
+            this.заявкаНаДеньгиToolStripMenuItem.Click += new System.EventHandler(this.заявкаНаДеньгиToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,5 +175,6 @@
         private System.Windows.Forms.ToolStripMenuItem кредитыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem складыToolStripMenuItem;
         private System.Windows.Forms.Button buttonOpenDeal;
+        private System.Windows.Forms.ToolStripMenuItem заявкаНаДеньгиToolStripMenuItem;
     }
 }
