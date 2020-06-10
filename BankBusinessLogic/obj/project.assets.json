@@ -3799,23 +3799,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NULS\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\anast\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NULS\\Desktop\\Galyamina_Gladilin_coursework-ver-16\\BankBusinessLogic\\BankBusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj",
       "projectName": "BankBusinessLogic",
-      "projectPath": "C:\\Users\\NULS\\Desktop\\Galyamina_Gladilin_coursework-ver-16\\BankBusinessLogic\\BankBusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\NULS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NULS\\Desktop\\Galyamina_Gladilin_coursework-ver-16\\BankBusinessLogic\\obj\\",
+      "projectPath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\BankBusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\anast\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\anast\\Source\\Repos\\Galyamina_Gladilin_coursework\\BankBusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\NULS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\anast\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3868,7 +3864,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   },

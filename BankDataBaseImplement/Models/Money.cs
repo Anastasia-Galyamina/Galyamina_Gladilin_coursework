@@ -15,6 +15,7 @@ namespace BankDataBaseImplement.Models
         public virtual List<CreditMoney> CreditMoney { get; set; }
         [ForeignKey("MoneyId")]
         public virtual List<StorageMoney> StorageMoney { get; set; }
+
         [ForeignKey("MoneyId")]
         public virtual List<MoneyRequest> MoneyRequests { get; set; }
     }

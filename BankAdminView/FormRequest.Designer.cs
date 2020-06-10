@@ -31,8 +31,10 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonFormRequestDOC = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.buttonFormRequestXLS = new System.Windows.Forms.Button();
+            this.buttonGetMoney = new System.Windows.Forms.Button();
+            this.buttonRef = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             // 
             this.buttonFormRequestDOC.Location = new System.Drawing.Point(385, 51);
             this.buttonFormRequestDOC.Name = "buttonFormRequestDOC";
-            this.buttonFormRequestDOC.Size = new System.Drawing.Size(155, 56);
+            this.buttonFormRequestDOC.Size = new System.Drawing.Size(214, 36);
             this.buttonFormRequestDOC.TabIndex = 1;
             this.buttonFormRequestDOC.Text = "Сформировать заявку в DOC";
             this.buttonFormRequestDOC.UseVisualStyleBackColor = true;
@@ -64,30 +66,52 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Почта";
             // 
-            // textBoxMail
+            // textBoxEmail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(427, 9);
-            this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(140, 22);
-            this.textBoxMail.TabIndex = 3;
+            this.textBoxEmail.Location = new System.Drawing.Point(427, 9);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(173, 22);
+            this.textBoxEmail.TabIndex = 3;
             // 
             // buttonFormRequestXLS
             // 
-            this.buttonFormRequestXLS.Location = new System.Drawing.Point(562, 51);
+            this.buttonFormRequestXLS.Location = new System.Drawing.Point(385, 93);
             this.buttonFormRequestXLS.Name = "buttonFormRequestXLS";
-            this.buttonFormRequestXLS.Size = new System.Drawing.Size(155, 56);
+            this.buttonFormRequestXLS.Size = new System.Drawing.Size(214, 32);
             this.buttonFormRequestXLS.TabIndex = 4;
             this.buttonFormRequestXLS.Text = "Сформировать заявку в XLS";
             this.buttonFormRequestXLS.UseVisualStyleBackColor = true;
             this.buttonFormRequestXLS.Click += new System.EventHandler(this.buttonFormRequestXLS_Click);
             // 
+            // buttonGetMoney
+            // 
+            this.buttonGetMoney.Location = new System.Drawing.Point(385, 131);
+            this.buttonGetMoney.Name = "buttonGetMoney";
+            this.buttonGetMoney.Size = new System.Drawing.Size(214, 31);
+            this.buttonGetMoney.TabIndex = 5;
+            this.buttonGetMoney.Text = "Получить деньги по заявке";
+            this.buttonGetMoney.UseVisualStyleBackColor = true;
+            this.buttonGetMoney.Click += new System.EventHandler(this.buttonGetMoney_Click);
+            // 
+            // buttonRef
+            // 
+            this.buttonRef.Location = new System.Drawing.Point(385, 168);
+            this.buttonRef.Name = "buttonRef";
+            this.buttonRef.Size = new System.Drawing.Size(215, 30);
+            this.buttonRef.TabIndex = 6;
+            this.buttonRef.Text = "Обновить список";
+            this.buttonRef.UseVisualStyleBackColor = true;
+            this.buttonRef.Click += new System.EventHandler(this.buttonRef_Click);
+            // 
             // FormRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(611, 336);
+            this.Controls.Add(this.buttonRef);
+            this.Controls.Add(this.buttonGetMoney);
             this.Controls.Add(this.buttonFormRequestXLS);
-            this.Controls.Add(this.textBoxMail);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonFormRequestDOC);
             this.Controls.Add(this.dataGridView);
@@ -105,7 +129,9 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button buttonFormRequestDOC;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxMail;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Button buttonFormRequestXLS;
+        private System.Windows.Forms.Button buttonGetMoney;
+        private System.Windows.Forms.Button buttonRef;
     }
 }

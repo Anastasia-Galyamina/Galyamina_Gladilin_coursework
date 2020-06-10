@@ -166,6 +166,52 @@ namespace BankDataBaseImplement.Migrations
                     b.ToTable("Money");
                 });
 
+            modelBuilder.Entity("BankDataBaseImplement.Models.MoneyRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MoneyId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RequestId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MoneyId");
+
+                    b.HasIndex("RequestId");
+
+                    b.ToTable("MoneyRequest");
+                });
+
+            modelBuilder.Entity("BankDataBaseImplement.Models.Request", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateCreation")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Request");
+                });
+
             modelBuilder.Entity("BankDataBaseImplement.Models.ResesvedMoney", b =>
                 {
                     b.Property<int?>("Id")
@@ -266,6 +312,21 @@ namespace BankDataBaseImplement.Migrations
                     b.HasOne("BankDataBaseImplement.Models.Deal", "Deal")
                         .WithMany("DealCredits")
                         .HasForeignKey("DealId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BankDataBaseImplement.Models.MoneyRequest", b =>
+                {
+                    b.HasOne("BankDataBaseImplement.Models.Money", "Money")
+                        .WithMany("MoneyRequests")
+                        .HasForeignKey("MoneyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BankDataBaseImplement.Models.Request", "Request")
+                        .WithMany("MoneyRequests")
+                        .HasForeignKey("RequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

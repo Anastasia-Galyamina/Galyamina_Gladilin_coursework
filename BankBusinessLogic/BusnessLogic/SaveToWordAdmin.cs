@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace BankBusinessLogic.BusnessLogic
 {
-    static class SaveToWordAdmin
+    public static class SaveToWordAdmin
     {
         public static void CreateDoc(WordInfo info)
         {
@@ -18,7 +18,7 @@ namespace BankBusinessLogic.BusnessLogic
 
                 docBody.AppendChild(CreateParagraph(new WordParagraph
                 {
-                    Texts = new List<string> { info.Title, info.Request.Email , info.Request.DateCreation.ToString() },
+                    Texts = new List<string> { info.Title, " " , info.Request.DateCreation.ToString() },
                     TextProperties = new WordParagraphProperties
                     {
                         Bold = true,
