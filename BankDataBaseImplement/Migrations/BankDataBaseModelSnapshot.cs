@@ -54,6 +54,9 @@ namespace BankDataBaseImplement.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MoneyId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -65,32 +68,9 @@ namespace BankDataBaseImplement.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Credits");
-                });
-
-            modelBuilder.Entity("BankDataBaseImplement.Models.CreditMoney", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Count")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CreditId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MoneyId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CreditId");
-
                     b.HasIndex("MoneyId");
 
-                    b.ToTable("CreditMoney");
+                    b.ToTable("Credits");
                 });
 
             modelBuilder.Entity("BankDataBaseImplement.Models.Deal", b =>
@@ -138,7 +118,6 @@ namespace BankDataBaseImplement.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("dateImplement")
-                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -212,48 +191,6 @@ namespace BankDataBaseImplement.Migrations
                     b.ToTable("Request");
                 });
 
-            modelBuilder.Entity("BankDataBaseImplement.Models.ResesvedMoney", b =>
-                {
-                    b.Property<int?>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ClientId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DealId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DealName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("countMoney")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClientId");
-
-                    b.ToTable("ResesvedMoney");
-                });
-
-            modelBuilder.Entity("BankDataBaseImplement.Models.Storage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("StorageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Storages");
-                });
-
             modelBuilder.Entity("BankDataBaseImplement.Models.StorageMoney", b =>
                 {
                     b.Property<int>("Id")
@@ -277,16 +214,10 @@ namespace BankDataBaseImplement.Migrations
                     b.ToTable("StorageMoney");
                 });
 
-            modelBuilder.Entity("BankDataBaseImplement.Models.CreditMoney", b =>
+            modelBuilder.Entity("BankDataBaseImplement.Models.Credit", b =>
                 {
-                    b.HasOne("BankDataBaseImplement.Models.Credit", "Credit")
-                        .WithMany("CreditMoney")
-                        .HasForeignKey("CreditId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("BankDataBaseImplement.Models.Money", "Money")
-                        .WithMany("CreditMoney")
+                        .WithMany("Credits")
                         .HasForeignKey("MoneyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -294,7 +225,7 @@ namespace BankDataBaseImplement.Migrations
 
             modelBuilder.Entity("BankDataBaseImplement.Models.Deal", b =>
                 {
-                    b.HasOne("BankDataBaseImplement.Models.Client", null)
+                    b.HasOne("BankDataBaseImplement.Models.Client", "Client")
                         .WithMany("Deals")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -327,15 +258,6 @@ namespace BankDataBaseImplement.Migrations
                     b.HasOne("BankDataBaseImplement.Models.Request", "Request")
                         .WithMany("MoneyRequests")
                         .HasForeignKey("RequestId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("BankDataBaseImplement.Models.ResesvedMoney", b =>
-                {
-                    b.HasOne("BankDataBaseImplement.Models.Client", "Client")
-                        .WithMany("ResesvedMoney")
-                        .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

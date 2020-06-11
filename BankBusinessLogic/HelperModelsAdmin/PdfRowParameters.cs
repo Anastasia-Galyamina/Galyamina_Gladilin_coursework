@@ -1,12 +1,11 @@
 ﻿using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.DocumentObjectModel;
-using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace BankBusinessLogic.HelperModelsAdmin
 {
-    class PdfRowParameters
+    public class PdfRowParameters
     {
         public Table Table { get; set; }
         public List<string> Texts { get; set; }

@@ -2,20 +2,15 @@
 using BankBusinessLogic.Enums;
 using BankBusinessLogic.InterFaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BankBusinessLogic.BusnessLogic
 {
         public class MainLogic
         {
-            private readonly IDealLogic dealLogic;
-            private readonly IStorageLogic storageLogic;
-
-            public MainLogic(IDealLogic dealLogic, IStorageLogic storageLogic)
+            private readonly IDealLogic dealLogic; 
+            public MainLogic(IDealLogic dealLogic)
             {
-                this.dealLogic = dealLogic;
-                this.storageLogic = storageLogic;
+                this.dealLogic = dealLogic;               
             }
 
             public void CreateOrder(DealBindingModel model)
@@ -33,7 +28,7 @@ namespace BankBusinessLogic.BusnessLogic
 
             public void TakeOrderInWork(ChangeStatusBindingModel model)
             {
-                var order = dealLogic.Read(new DealBindingModel { Id = model.DealId })?[0];
+               var order = dealLogic.Read(new DealBindingModel { Id = model.DealId })?[0];
                 if (order == null)
                 {
                     throw new Exception("Не найден заказ");
@@ -41,19 +36,7 @@ namespace BankBusinessLogic.BusnessLogic
                 if (order.Status != DealStatus.Принят)
                 {
                     throw new Exception("Заказ не в статусе \"Принят\"");
-                }
-                if (storageLogic.RemoveMaterials(order))
-                {
-                    dealLogic.CreateOrUpdate(new DealBindingModel
-                    {
-                        Id = order.Id,
-                        DealName = order.DealName,
-                        DealCredits = order.DealCredits,
-                        ClientFIO = order.ClientFIO,
-                        ClientId = order.ClientId,
-                        Status = DealStatus.Подписан
-                    });
-                }
+                }                
             }
         }
 }

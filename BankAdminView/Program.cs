@@ -1,11 +1,7 @@
 ﻿using BankBusinessLogic.BusnessLogic;
 using BankBusinessLogic.InterFaces;
 using BankDataBaseImplement.Implements;
-using BankAdminView;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 using Unity.Lifetime;
@@ -37,8 +33,7 @@ namespace BankAdminView
             currentContainer.RegisterType<IClientLogic, ClientLogic>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<MainLogic>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IStorageMoneyLogic, StorageMoneyLogic>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IStorageLogic, StorageLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IStorageMoneyLogic, StorageMoneyLogic>(new HierarchicalLifetimeManager());           
             currentContainer.RegisterType<IRequestLogic, RequestLogic>(new HierarchicalLifetimeManager());
             return currentContainer;
         }

@@ -2,11 +2,9 @@
 using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.ViewModels;
 using BankDataBaseImplement.Models;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BankDataBaseImplement.Implements
 {
@@ -118,10 +116,7 @@ namespace BankDataBaseImplement.Implements
                     CreditName = rec.CreditName,
                     Price = rec.Price,
                     Term = rec.Term,
-                    Currency = rec.currency,
-                    CreditMoney = context.CreditMoney.Include(recPC => recPC.Money)
-                                                           .Where(recPC => recPC.CreditId == rec.Id)
-                                                           .ToDictionary(recPC => recPC.MoneyId, recPC => (recPC.Money?.Currency, recPC.Count))
+                    Currency = rec.currency                   
                 }).ToList();
             }
         }

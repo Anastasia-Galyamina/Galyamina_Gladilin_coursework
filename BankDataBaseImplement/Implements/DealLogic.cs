@@ -180,18 +180,7 @@ namespace BankDataBaseImplement.Implements
         {
             //ищем id  кредитов с таким id сделки в таблице dealcredits
             using (var context = new BankDataBase())
-            {
-                /*foreach (var deal in context.Deals)
-                {
-                    if (deal.Id == id)
-                    {
-                        if(deal.reserved == true)
-                        {
-                            MessageBox.Show("деньги уже зарезервированы");
-                        }
-                    }
-                        deal.reserved = true;
-                }*/
+            {                
                 foreach (var deal in context.DealCredits)
                 {
                     if (deal.DealId == id)

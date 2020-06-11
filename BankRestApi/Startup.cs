@@ -1,18 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using BankBusinessLogic.BusnessLogic;
 using BankBusinessLogic.InterFaces;
 using BankDataBaseImplement.Implements;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace BankRestApi
 {
@@ -29,9 +22,8 @@ namespace BankRestApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson();
-            services.AddTransient<IMoneyLogic, MoneyLogic>();
-            services.AddTransient<IReservMoney, ReserveLogic>();
-            services.AddTransient<IStorageLogic, StorageLogic>();
+            services.AddTransient<IMoneyLogic, MoneyLogic>();       
+            services.AddTransient<IStorageMoneyLogic, StorageMoneyLogic>();
             services.AddTransient<ICreditLogic, CreditLogic>();
             services.AddTransient<IClientLogic, ClientLogic>();
             services.AddTransient<IDealLogic, DealLogic>();

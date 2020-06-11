@@ -19,8 +19,7 @@ namespace BankDataBaseImplement.Implements
             using (var context = new BankDataBase())
             {
                 Request request = new Request();
-                context.Request.Add(request);
-                //request.Id = model.Id;
+                context.Request.Add(request);                
                 request.Email = model.Email;
                 request.DateCreation = model.DateCreation;
                 context.SaveChanges();
@@ -28,8 +27,7 @@ namespace BankDataBaseImplement.Implements
                 foreach (var currency in model.MoneyCount)
                 {
                     MoneyRequest moneyRequest = new MoneyRequest();
-                    context.MoneyRequest.Add(moneyRequest);
-                   // moneyRequest.Id = context.MoneyRequest.Count() + 1;
+                    context.MoneyRequest.Add(moneyRequest);                   
                     moneyRequest.MoneyId = context.Money.FirstOrDefault(rec => rec.Currency == currency.Key).Id;
                     moneyRequest.RequestId = request.Id;
                     moneyRequest.Count = currency.Value;

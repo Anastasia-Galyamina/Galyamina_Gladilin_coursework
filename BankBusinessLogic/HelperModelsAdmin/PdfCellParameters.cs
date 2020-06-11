@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MigraDoc.DocumentObjectModel;
+﻿using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
 
 namespace BankBusinessLogic.HelperModelsAdmin
 {
-    class PdfCellParameters
+    public class PdfCellParameters
     {
         public Cell Cell { get; set; }
         public string Text { get; set; }

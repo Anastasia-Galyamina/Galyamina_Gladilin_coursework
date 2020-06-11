@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using BankBusinessLogic.BindingModels;
 using BankBusinessLogic.BusnessLogic;
 using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.ViewModels;
-using BankDataBaseImplement.Implements;
 using BankRestApi.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankRestApi.Controllers
@@ -20,14 +17,12 @@ namespace BankRestApi.Controllers
         private readonly IDealLogic _deal;
         private readonly ICreditLogic _credit;
         private readonly MainLogic _main;
-        private readonly IReservMoney _reserveLogic;
         private readonly ReportLogic _report;
-        public MainController(IDealLogic order, ICreditLogic furniture, MainLogic main, IReservMoney reserveLogic, ReportLogic report)
+        public MainController(IDealLogic order, ICreditLogic furniture, MainLogic main, ReportLogic report)
         {
             _deal = order;
             _credit = furniture;
-            _main = main;
-            _reserveLogic = reserveLogic;
+            _main = main;         
             _report = report;
         }
         [HttpGet]
@@ -43,21 +38,13 @@ namespace BankRestApi.Controllers
         {
             ClientId = clientId,
             
-        });
-        [HttpGet]
-        public List<ReservedMoneyViewModel> GetReservedMoney(int clientId) => _reserveLogic.Read(new ReservedMoneyBindingModel
-        {
-            ClientId = clientId,
-        });
+        });        
         [HttpPost]
         public void SendMessage(ReportBindingModel model) =>_report.SendMessage(model);
 
         [HttpPost]
         public void CreateDeal(DealBindingModel model) =>
-       _main.CreateOrder(model);
-        [HttpPost]
-        public void ReservMoney(ReservedMoneyBindingModel model) =>
-      _reserveLogic.CreateOrUpdate(model);
+       _main.CreateOrder(model);        
         [HttpPost]
         public void DocCreditDial(ReportBindingModel model) => _report.DocCreditDeal(model);
         [HttpPost]

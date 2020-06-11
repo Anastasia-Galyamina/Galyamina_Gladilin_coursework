@@ -15,8 +15,6 @@ namespace BankDataBaseImplement.Models
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
-        public virtual List<Deal> Deals { get; set; }
-        [ForeignKey("ClientId")] 
-        public virtual List<ResesvedMoney> ResesvedMoney { get; set; }
+        public virtual List<Deal> Deals { get; set; }        
     }
 }

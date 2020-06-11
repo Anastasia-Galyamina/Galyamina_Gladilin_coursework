@@ -1,14 +1,8 @@
-﻿using BankBusinessLogic.HelperModelsClient;
-using MigraDoc.DocumentObjectModel;
-using MigraDoc.DocumentObjectModel.Tables;
-using MigraDoc.Rendering;
-using System.Collections.Generic;
-
-namespace BankBusinessLogic.BusnessLogic
+﻿namespace BankBusinessLogic.BusnessLogic
 {
-    static class SaveToPdfClient
+    public static class SaveToPdfAdmin
     {
-        [System.Obsolete]
+       /* [System.Obsolete]
         public static void CreateDoc(PdfInfo info)
         {
             Document document = new Document();
@@ -90,6 +84,6 @@ namespace BankBusinessLogic.BusnessLogic
             cellParameters.Cell.Borders.Bottom.Width = cellParameters.BorderWidth;
             cellParameters.Cell.Format.Alignment = cellParameters.ParagraphAlignment;
             cellParameters.Cell.VerticalAlignment = VerticalAlignment.Center;
-        }
+        }*/
     }
 }
