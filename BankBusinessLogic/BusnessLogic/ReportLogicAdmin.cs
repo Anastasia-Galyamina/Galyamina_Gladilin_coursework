@@ -13,12 +13,15 @@ namespace BankBusinessLogic.BusnessLogic
     {
         private readonly IRequestLogic requestLogic;
         private readonly IMoneyLogic moneyLogic;
+        private readonly IDealLogic dealLogic;
 
-        public ReportLogicAdmin(IRequestLogic requestLogic, IMoneyLogic moneyLogic)
+        public ReportLogicAdmin(IRequestLogic requestLogic, IMoneyLogic moneyLogic, IDealLogic dealLogic)
         {
             this.requestLogic = requestLogic;
             this.moneyLogic = moneyLogic;
-        }       
+            this.dealLogic = dealLogic;
+        }      
+        
         public List<ReportRequestViewModel> GetRequestsMoney(ReportBindingModelAdmin model)
         {
             var list = new List<ReportRequestViewModel>();
@@ -60,7 +63,8 @@ namespace BankBusinessLogic.BusnessLogic
             {
                 FileName = model.FileName,
                 Title = "Список заявок",
-                Requests = GetRequestsMoney(model)
+                Requests = GetRequestsMoney(model),
+                Credits = dealLogic.FormReport()
             });
         }
         public void SendMessage(ReportBindingModel model)

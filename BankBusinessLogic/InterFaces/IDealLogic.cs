@@ -8,6 +8,7 @@ namespace BankBusinessLogic.InterFaces
 {
     public interface IDealLogic
     {
+        List<KeyValuePair<string, (string, string, string, System.DateTime?, string, decimal)>> FormReport();
         List<DealViewModel> Read(DealBindingModel model);
         void CreateOrUpdate(DealBindingModel model);
         void Delete(DealBindingModel model);

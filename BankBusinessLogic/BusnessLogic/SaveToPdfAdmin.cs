@@ -48,7 +48,41 @@ namespace BankBusinessLogic.BusnessLogic
                         ParagraphAlignment = ParagraphAlignment.Left
                     });
                 }
-            }            
+            }
+            var table2 = document.LastSection.AddTable();
+            List<string> columns2 = new List<string> { "2cm", "2cm", "2cm", "2cm", "2cm", "2cm", "2cm" };
+            foreach (var elem in columns2)
+            {
+                table2.AddColumn(elem);
+            }
+            CreateRow(new PdfRowParameters
+            {
+                Table = table2,
+                Texts = new List<string> { "Название сделки", "Клиент", "Кредит", "Срок", "Дата", "Валюта", "Цена" },
+                Style = "NormalTitle",
+                ParagraphAlignment = ParagraphAlignment.Center
+            });
+            if (info.Credits != null)
+            {
+                foreach (var fb in info.Credits)
+                {
+                    CreateRow(new PdfRowParameters
+                    {
+                        Table = table2,
+                        Texts = new List<string> {
+                        fb.Key, 
+                        fb.Value.Item1,
+                        fb.Value.Item2,
+                        fb.Value.Item3,
+                        fb.Value.Item4.ToString(),
+                        fb.Value.Item5,
+                        fb.Value.Item6.ToString()
+                        },
+                        Style = "Normal",
+                        ParagraphAlignment = ParagraphAlignment.Left
+                    });
+                }
+            }
             PdfDocumentRenderer renderer = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always)
             {
                 Document = document

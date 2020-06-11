@@ -6,12 +6,22 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BankDataBaseImplement.Implements
 {
     public class DealLogic : IDealLogic
     {
+        public List<KeyValuePair<string,(string, string, string, System.DateTime?, string, decimal)>> FormReport()
+        {
+            using (var context = new BankDataBase())
+            {                
+                var list = context.DealCredits.Include(rec => rec.Deal).Include(rec => rec.Credit).
+                    Where(rec => rec.DealId == rec.Deal.Id).Where(rec => rec.CreditId == rec.Credit.Id)
+                    .ToDictionary(rec => rec.Deal.DealName, rec => (rec.Deal.ClientFIO, rec.Credit.CreditName, rec.Credit.Term, rec.dateImplement, rec.Credit.currency, rec.Credit.Price)).ToList();
+                return list;
+            }
+            
+        }
         public void CreateOrUpdate(DealBindingModel model)
         {
             using (var context = new BankDataBase())

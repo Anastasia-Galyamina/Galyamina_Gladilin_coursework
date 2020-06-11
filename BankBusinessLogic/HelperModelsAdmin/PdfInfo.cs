@@ -7,6 +7,8 @@ namespace BankBusinessLogic.HelperModelsAdmin
     {
         public string FileName { get; set; }
         public string Title { get; set; }
-        public List<ReportRequestViewModel> Requests { get; set; }       
+        public List<ReportRequestViewModel> Requests { get; set; }
+
+        public List<KeyValuePair<string, (string, string, string, System.DateTime?, string, decimal)>> Credits { get; set; }
     }
 }
