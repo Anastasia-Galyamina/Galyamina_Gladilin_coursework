@@ -4,7 +4,6 @@ using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
 
@@ -13,14 +12,12 @@ namespace BankBusinessLogic.BusnessLogic
     public class ReportLogic
     {
         private readonly IDealLogic dealLogic;
-        private readonly ICreditLogic creditLogic;
-        private readonly IMoneyLogic moneyLogic;
+        private readonly ICreditLogic creditLogic;      
 
-        public ReportLogic(IDealLogic dealLogic, ICreditLogic creditLogic, IMoneyLogic moneyLogic)
+        public ReportLogic(IDealLogic dealLogic, ICreditLogic creditLogic)
         {
             this.dealLogic = dealLogic;
-            this.creditLogic = creditLogic;
-            this.moneyLogic = moneyLogic;
+            this.creditLogic = creditLogic;            
         }
         public List<ReportDealViewModel> GetDeals(ReportBindingModel model)
         {
@@ -74,8 +71,8 @@ namespace BankBusinessLogic.BusnessLogic
                             var record = new ReportDealMoneyViewModel
                             {
                                 dealName = deal.DealName,
-                                currency = credit.CreditMoney.First().Value.Item1,
-                                countMoney = credit.CreditMoney.First().Value.Item2
+                                currency = credit.Currency,
+                                countMoney = credit.Price                                
                             };
                             list.Add(record);
                         }

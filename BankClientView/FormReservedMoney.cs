@@ -21,11 +21,11 @@ namespace BankClientView
         {
             try
             {
-                dataGridView.DataSource = APIClient.GetRequest<List<ReservedMoneyViewModel>>($"api/main/getreservedmoney?clientId={Program.Client.Id}");
+               /* dataGridView.DataSource = APIClient.GetRequest<List<ReservedMoneyViewModel>>($"api/main/getreservedmoney?clientId={Program.Client.Id}");
                 dataGridView.Columns[0].Visible = false;
                 dataGridView.Columns[1].Visible = true;
                 dataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                dataGridView.Columns[3].Visible = true;
+                dataGridView.Columns[3].Visible = true;*/
             }
             catch (Exception ex)
             {

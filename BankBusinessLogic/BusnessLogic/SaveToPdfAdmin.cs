@@ -1,8 +1,14 @@
-﻿namespace BankBusinessLogic.BusnessLogic
+﻿using BankBusinessLogic.HelperModelsAdmin;
+using MigraDoc.DocumentObjectModel;
+using MigraDoc.DocumentObjectModel.Tables;
+using MigraDoc.Rendering;
+using System.Collections.Generic;
+
+namespace BankBusinessLogic.BusnessLogic
 {
     public static class SaveToPdfAdmin
     {
-       /* [System.Obsolete]
+       [System.Obsolete]
         public static void CreateDoc(PdfInfo info)
         {
             Document document = new Document();
@@ -13,7 +19,7 @@
             paragraph.Format.Alignment = ParagraphAlignment.Center;
             paragraph.Style = "NormalTitle";
             var table = document.LastSection.AddTable();
-            List<string> columns = new List<string> { "6cm", "6cm", "6cm" };
+            List<string> columns = new List<string> { "6cm", "6cm", "6cm", "6cm" };
             foreach (var elem in columns)
             {
                 table.AddColumn(elem);
@@ -21,27 +27,28 @@
             CreateRow(new PdfRowParameters
             {
                 Table = table,
-                Texts = new List<string> { "Сделка", "Деньги", "Количество" },
+                Texts = new List<string> { "Номер заявки", "Почта", "Валюта", "Сумма" },
                 Style = "NormalTitle",
                 ParagraphAlignment = ParagraphAlignment.Center
             });
-            if (info.Deals != null)
+            if (info.Requests != null)
             {
-                foreach (var fb in info.Deals)
+                foreach (var fb in info.Requests)
                 {
                     CreateRow(new PdfRowParameters
                     {
                         Table = table,
                         Texts = new List<string> {
-                        fb.dealName,
-                        fb.currency,
-                        fb.countMoney.ToString()
+                        fb.RequestId.ToString(),
+                        fb.Email,
+                        fb.Currency,
+                        fb.Count.ToString()
                         },
                         Style = "Normal",
                         ParagraphAlignment = ParagraphAlignment.Left
                     });
                 }
-            }
+            }            
             PdfDocumentRenderer renderer = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always)
             {
                 Document = document
@@ -84,6 +91,6 @@
             cellParameters.Cell.Borders.Bottom.Width = cellParameters.BorderWidth;
             cellParameters.Cell.Format.Alignment = cellParameters.ParagraphAlignment;
             cellParameters.Cell.VerticalAlignment = VerticalAlignment.Center;
-        }*/
+        }
     }
 }

@@ -1,14 +1,13 @@
 ﻿using BankBusinessLogic.ViewModels;
 using System.Collections.Generic;
 
-namespace BankBusinessLogic.HelperModelsAdmin
+namespace BankBusinessLogic.HelperModelsClient
 {
-    class PdfInfo
+    public class PdfInfo
     {
         public string FileName { get; set; }
         public string Title { get; set; }
-        public List<CreditViewModel> Credits { get; set; }
-        public List<RequestViewModel> Requests { get; set; }
+        public List<ReportDealMoneyViewModel> Deals { get; set; }        
 
     }
 }

@@ -1,75 +1,50 @@
-﻿using System;
+﻿using BankBusinessLogic.BindingModels;
+using BankBusinessLogic.HelperModelsAdmin;
+using BankBusinessLogic.InterFaces;
+using BankBusinessLogic.ViewModels;
+using System;
 using System.Collections.Generic;
-
+using System.Net;
+using System.Net.Mail;
 
 namespace BankBusinessLogic.BusnessLogic
 {
-    class ReportLogicAdmin
+    public class ReportLogicAdmin
     {
-       /* private readonly IDealLogic dealLogic;
-        private readonly ICreditLogic creditLogic;
+        private readonly IRequestLogic requestLogic;
         private readonly IMoneyLogic moneyLogic;
 
-        public ReportLogic(IDealLogic dealLogic, ICreditLogic creditLogic, IMoneyLogic moneyLogic)
+        public ReportLogicAdmin(IRequestLogic requestLogic, IMoneyLogic moneyLogic)
         {
-            this.dealLogic = dealLogic;
-            this.creditLogic = creditLogic;
+            this.requestLogic = requestLogic;
             this.moneyLogic = moneyLogic;
-        }
-        public List<ReportDealViewModel> GetDeals(ReportBindingModel model)
+        }       
+        public List<ReportRequestViewModel> GetRequestsMoney(ReportBindingModelAdmin model)
         {
-            var list = new List<ReportDealViewModel>();
-            foreach (var DealId in model.DealsId)
-            {
-                var credits = creditLogic.Read(null);
-                var deals = dealLogic.Read(new DealBindingModel()
-                {
-                    Id = DealId
-                });
-                foreach (var credit in credits)
-                {
-                    foreach (var deal in deals)
-                    {
-                        if (deal.DealCredits.ContainsKey(credit.Id))
-                        {
-                            var record = new ReportDealViewModel
-                            {
-                                CreditName = deal.DealCredits[credit.Id].Item1,
-                                DealName = deal.DealName,
-                                date = deal.DealCredits[credit.Id].Item2
-                            };
-                            list.Add(record);
-                        }
-                    }
-                }
-            }
-            return list;
-        }
-        public List<ReportDealMoneyViewModel> GetDealsMoney(ReportBindingModel model)
-        {
-            var list = new List<ReportDealMoneyViewModel>();
-            if (model.DealsId == null)
+            var list = new List<ReportRequestViewModel>();
+            if (model.RequestsId == null)
             {
                 return null;
             }
-            foreach (var DealId in model.DealsId)
+            foreach (var RequestId in model.RequestsId)
             {
-                var credits = creditLogic.Read(null);
-                var deals = dealLogic.Read(new DealBindingModel()
+                var money = moneyLogic.Read(null);
+                var requests = requestLogic.ReadRequests(new RequestBindingModel()
                 {
-                    Id = DealId
+                    Id = RequestId
                 });
-                foreach (var deal in deals)
+                foreach (var request in requests)
                 {
-                    foreach (var credit in credits)
+                    foreach (var currency in money)
                     {
-                        if (deal.DealCredits.ContainsKey(credit.Id))
+                        if (request.MoneyCount.ContainsKey(currency.Currency))
                         {
-                            var record = new ReportDealMoneyViewModel
+                            var record = new ReportRequestViewModel
                             {
-                                dealName = deal.DealName,
-                                currency = credit.CreditMoney.First().Value.Item1,
-                                countMoney = credit.CreditMoney.First().Value.Item2
+                                RequestId = request.Id,
+                                Count = money.Count,
+                                Currency = currency.Currency,
+                                Email = request.Email                                
                             };
                             list.Add(record);
                         }
@@ -77,33 +52,15 @@ namespace BankBusinessLogic.BusnessLogic
                 }
             }
             return list;
-        }
-        public void DocCreditDeal(ReportBindingModel model)
-        {
-            SaveToWordClient.CreateDoc(new WordInfo
-            {
-                FileName = model.FileName,
-                Title = "Сделки",
-                Deals = GetDeals(model)
-            });
-        }
-        public void ExelCreditDeal(ReportBindingModel model)
-        {
-            SaveToExcelClient.CreateDoc(new ExcelInfo
-            {
-                FileName = model.FileName,
-                Title = "Сделки",
-                Deals = GetDeals(model)
-            });
-        }
+        }        
         [Obsolete]
-        public void SaveToPdfFile(ReportBindingModel model)
+        public void SaveToPdfFile(ReportBindingModelAdmin model)
         {
-            SaveToPdfClient.CreateDoc(new PdfInfo
+            SaveToPdfAdmin.CreateDoc(new PdfInfo
             {
                 FileName = model.FileName,
-                Title = "Список сделок",
-                Deals = GetDealsMoney(model)
+                Title = "Список заявок",
+                Requests = GetRequestsMoney(model)
             });
         }
         public void SendMessage(ReportBindingModel model)
@@ -117,6 +74,6 @@ namespace BankBusinessLogic.BusnessLogic
             smtp.Credentials = new NetworkCredential("labwork15kafis@gmail.com", "passlab15");
             smtp.EnableSsl = true;
             smtp.Send(m);
-        }*/
+        }
     }
 }

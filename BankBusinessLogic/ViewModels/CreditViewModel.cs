@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
 
 namespace BankBusinessLogic.ViewModels
 {
@@ -16,7 +13,6 @@ namespace BankBusinessLogic.ViewModels
         public string Term { get; set; }
 
         [DisplayName("Валюта")]
-        public string Currency { get; set; }
-        public Dictionary<int, (string, int)> CreditMoney { get; set; }
+        public string Currency { get; set; }       
     }
 }

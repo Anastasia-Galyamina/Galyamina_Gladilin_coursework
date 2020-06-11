@@ -4,10 +4,10 @@ using System.Text;
 
 namespace BankBusinessLogic.BindingModels
 {
-    public class ReportAdminBindingModel
+    public class ReportBindingModelAdmin
     {
         public string FileName { get; set; }       
-        public List<RequestBindingModel> Requests { get; set; }
-        public List<CreditBindingModel> Credits { get; set; }       
+        public List<int> RequestsId { get; set; }
+        public string Email { get; set; }
     }
 }

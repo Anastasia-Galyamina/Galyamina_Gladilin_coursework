@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System;
 using System.Windows.Forms;
 using Unity;
 using BankBusinessLogic.InterFaces;
@@ -32,11 +30,7 @@ namespace BankAdminView
                 {
                     dataGridView.DataSource = list;
                     dataGridView.Columns[0].Visible = false;
-                    dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    // dataGridView.Columns[1].Visible = true;
-                    // dataGridView.Columns[2].Visible = true;
-                    // dataGridView.Columns[3].Visible = true;
-                    dataGridView.Columns[5].Visible = false;
+                    dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;                    
                 }
             }
             catch (Exception ex)

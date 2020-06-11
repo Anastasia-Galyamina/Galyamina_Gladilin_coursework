@@ -39,14 +39,14 @@ namespace BankClientView
             }
             try
             {
-                APIClient.PostRequest("api/main/reservmoney", new ReservedMoneyBindingModel
+                /*APIClient.PostRequest("api/main/reservmoney", new ReservedMoneyBindingModel
                 {
                     ClientId = Program.Client.Id,
                     DealName = comboBox.Text,
                     countMoney = Convert.ToInt32(textBoxCount.Text),
                     DealId = comboBox.SelectedIndex,
                     Id = id
-                });
+                });*/
                 MessageBox.Show("Сохранение прошло успешно", "Сообщение",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;

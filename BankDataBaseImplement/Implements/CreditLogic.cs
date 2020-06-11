@@ -39,30 +39,9 @@ namespace BankDataBaseImplement.Implements
                         element.CreditName = model.CreditName;
                         element.Price = model.Price;
                         element.currency = model.Currency;
-                        element.Term = model.Term;                       
-                        context.SaveChanges();
-                        /*if (model.Id.HasValue)
-                        {
-                            var productComponents = context.CreditMoney.Where(rec => rec.CreditId == model.Id.Value).ToList();
-                            context.CreditMoney.RemoveRange(productComponents.Where(rec => !model.CreditMoney.ContainsKey(rec.MoneyId)).ToList());
-                            context.SaveChanges();
-                            foreach (var updateComponent in productComponents)
-                            {
-                                updateComponent.Count = model.CreditMoney[updateComponent.MoneyId].Item2;
-                                model.CreditMoney.Remove(updateComponent.MoneyId);
-                            }
-                            context.SaveChanges();
-                        }*/
-                       /* foreach (var pc in model.CreditMoney)
-                        {
-                            context.CreditMoney.Add(new CreditMoney
-                            {
-                                CreditId = element.Id,
-                                MoneyId = pc.Key,
-                                Count = pc.Value.Item2
-                            });
-                            context.SaveChanges();
-                        }*/
+                        element.Term = model.Term;
+                        element.MoneyId = context.Money.FirstOrDefault(rec => rec.Currency == model.Currency).Id;
+                        context.SaveChanges();                        
                         transaction.Commit();
                     }
                     catch (Exception)
@@ -81,8 +60,7 @@ namespace BankDataBaseImplement.Implements
                 using (var transaction = context.Database.BeginTransaction())
                 {
                     try
-                    {
-                        //context.CreditMoney.RemoveRange(context.CreditMoney.Where(rec => rec.CreditId == model.Id));
+                    {                        
                         Credit element = context.Credits.FirstOrDefault(rec => rec.Id == model.Id);
                         if (element != null)
                         {

@@ -6,6 +6,7 @@ namespace BankBusinessLogic.InterFaces
 {
     public interface IRequestLogic
     {
+        List<RequestViewModel> ReadRequests(RequestBindingModel model);
         void Save(RequestViewModel model);
         RequestViewModel GetRequest(RequestBindingModel model);
         Dictionary<string, int> Read();

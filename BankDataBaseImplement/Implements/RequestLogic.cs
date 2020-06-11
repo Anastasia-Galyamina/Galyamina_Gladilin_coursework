@@ -4,6 +4,7 @@ using BankBusinessLogic.HelperModelsAdmin;
 using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.ViewModels;
 using BankDataBaseImplement.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,24 @@ namespace BankDataBaseImplement.Implements
 {
     public class RequestLogic : IRequestLogic
     {
+        public List<RequestViewModel> ReadRequests(RequestBindingModel model)
+        {
+            using (var context = new BankDataBase())
+            {
+                return context.Request.Where(rec => model == null || (rec.Id == model.Id ) ||
+                (rec.Email == model.Email))
+                .ToList()
+                .Select(rec => new RequestViewModel
+                {
+                    Id = rec.Id,
+                    Email = rec.Email,
+                    DateCreation = rec.DateCreation,                    
+                    MoneyCount = context.MoneyRequest.Include(recPC => recPC.Money)
+                                                           .Where(recPC => recPC.RequestId == rec.Id)
+                                                           .ToDictionary( recPC => recPC.Money.Currency, recPc => recPc.Count)
+                }).ToList();
+            }
+        }
         public void Save(RequestViewModel model)
         {
             using (var context = new BankDataBase())

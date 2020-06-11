@@ -36,9 +36,10 @@
             this.деньгиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.кредитыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.складыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.заявкаНаДеньгиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonOpenDeal = new System.Windows.Forms.Button();
-            this.заявкаНаДеньгиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчётToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +78,8 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.справочникиToolStripMenuItem,
-            this.заявкаНаДеньгиToolStripMenuItem});
+            this.заявкаНаДеньгиToolStripMenuItem,
+            this.отчётToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1004, 24);
@@ -97,23 +99,30 @@
             // деньгиToolStripMenuItem
             // 
             this.деньгиToolStripMenuItem.Name = "деньгиToolStripMenuItem";
-            this.деньгиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.деньгиToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.деньгиToolStripMenuItem.Text = "Деньги";
             this.деньгиToolStripMenuItem.Click += new System.EventHandler(this.деньгиToolStripMenuItem_Click);
             // 
             // кредитыToolStripMenuItem
             // 
             this.кредитыToolStripMenuItem.Name = "кредитыToolStripMenuItem";
-            this.кредитыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.кредитыToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.кредитыToolStripMenuItem.Text = "Кредиты";
             this.кредитыToolStripMenuItem.Click += new System.EventHandler(this.кредитыToolStripMenuItem_Click);
             // 
             // складыToolStripMenuItem
             // 
             this.складыToolStripMenuItem.Name = "складыToolStripMenuItem";
-            this.складыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.складыToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.складыToolStripMenuItem.Text = "Склад";
             this.складыToolStripMenuItem.Click += new System.EventHandler(this.СкладыToolStripMenuItem_Click);
+            // 
+            // заявкаНаДеньгиToolStripMenuItem
+            // 
+            this.заявкаНаДеньгиToolStripMenuItem.Name = "заявкаНаДеньгиToolStripMenuItem";
+            this.заявкаНаДеньгиToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.заявкаНаДеньгиToolStripMenuItem.Text = "Заявка на деньги";
+            this.заявкаНаДеньгиToolStripMenuItem.Click += new System.EventHandler(this.заявкаНаДеньгиToolStripMenuItem_Click);
             // 
             // dataGridView
             // 
@@ -133,12 +142,12 @@
             this.buttonOpenDeal.UseVisualStyleBackColor = true;
             this.buttonOpenDeal.Click += new System.EventHandler(this.buttonOpenDeal_Click);
             // 
-            // заявкаНаДеньгиToolStripMenuItem
+            // отчётToolStripMenuItem
             // 
-            this.заявкаНаДеньгиToolStripMenuItem.Name = "заявкаНаДеньгиToolStripMenuItem";
-            this.заявкаНаДеньгиToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
-            this.заявкаНаДеньгиToolStripMenuItem.Text = "Заявка на деньги";
-            this.заявкаНаДеньгиToolStripMenuItem.Click += new System.EventHandler(this.заявкаНаДеньгиToolStripMenuItem_Click);
+            this.отчётToolStripMenuItem.Name = "отчётToolStripMenuItem";
+            this.отчётToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.отчётToolStripMenuItem.Text = "Отчёт";
+            this.отчётToolStripMenuItem.Click += new System.EventHandler(this.отчётToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -176,5 +185,6 @@
         private System.Windows.Forms.ToolStripMenuItem складыToolStripMenuItem;
         private System.Windows.Forms.Button buttonOpenDeal;
         private System.Windows.Forms.ToolStripMenuItem заявкаНаДеньгиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчётToolStripMenuItem;
     }
 }

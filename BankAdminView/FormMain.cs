@@ -106,5 +106,11 @@ namespace BankAdminView
             var form = Container.Resolve<FormRequest>();
             form.ShowDialog();
         }
+
+        private void отчётToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormReport>();
+            form.ShowDialog();
+        }
     }
 }
