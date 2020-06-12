@@ -62,7 +62,7 @@ namespace BankBusinessLogic.BusnessLogic
             CreateRow(new PdfRowParameters
             {
                 Table = table2,
-                Texts = new List<string> { "Название сделки", "Клиент", "Кредит", "Срок", "Дата", "Валюта", "Цена" },
+                Texts = new List<string> { "Название сделки", "Клиент", "Кредит", "Срок", "Валюта", "Цена" },
                 Style = "NormalTitle",
                 ParagraphAlignment = ParagraphAlignment.Center
             });
@@ -77,8 +77,7 @@ namespace BankBusinessLogic.BusnessLogic
                         fb.DealName,
                         fb.ClientFio,
                         fb.CreditName,
-                        fb.Term,
-                        fb.Date.ToString(),
+                        fb.Term,                        
                         fb.Currency,
                         fb.Price.ToString()
                         },

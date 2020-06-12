@@ -18,9 +18,8 @@ namespace BankDataBaseImplement.Implements
             {
                 var model = new List<ReportCreditsViewModel>();
                 var list = context.DealCredits.Include(rec => rec.Deal).Include(rec => rec.Credit).
-                    //Where(rec => rec.DealId == rec.Deal.Id).Where(rec => rec.CreditId == rec.Credit.Id).
-                    Where( rec => rec.dateImplement >= dateFrom && rec.dateImplement <= dateTo) 
-                    .ToDictionary(rec => rec.Id, rec => (rec.Deal.DealName, rec.Deal.ClientFIO, rec.Credit.CreditName, rec.Credit.Term, rec.dateImplement, rec.Credit.currency, rec.Credit.Price));
+                    Where(rec => rec.DealId == rec.Deal.Id).Where(rec => rec.CreditId == rec.Credit.Id).                     
+                    ToDictionary(rec => rec.Id, rec => (rec.Deal.DealName, rec.Deal.ClientFIO, rec.Credit.CreditName, rec.Credit.Term, rec.Credit.currency, rec.Credit.Price));
                 foreach(var item in list)
                 {
                     var deal = new ReportCreditsViewModel();
@@ -28,8 +27,7 @@ namespace BankDataBaseImplement.Implements
                     deal.DealName = item.Value.DealName;
                     deal.ClientFio = item.Value.ClientFIO;
                     deal.CreditName = item.Value.CreditName;
-                    deal.Term = item.Value.Term;
-                    deal.Date = item.Value.dateImplement;
+                    deal.Term = item.Value.Term;                    
                     deal.Currency = item.Value.currency;
                     deal.Price = item.Value.Price;
                     model.Add(deal);

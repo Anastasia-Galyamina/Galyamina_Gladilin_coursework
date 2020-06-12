@@ -38,7 +38,7 @@ namespace BankAdminView
                 FileName = "Report.pdf",
                 RequestsId = ids
 
-            });
+            }, dateTimePickerFrom.Value, dateTimePickerTo.Value);
             logic.SendMessage(new ReportBindingModelAdmin
             {
                 FileName = "Report.pdf"

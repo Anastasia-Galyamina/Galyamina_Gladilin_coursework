@@ -58,14 +58,14 @@ namespace BankBusinessLogic.BusnessLogic
             return list;
         }        
         [Obsolete]
-        public void SaveToPdfFile(ReportBindingModelAdmin model)
+        public void SaveToPdfFile(ReportBindingModelAdmin model, DateTime dateFrom, DateTime dateTo)
         {
             SaveToPdfAdmin.CreateDoc(new PdfInfo
             {
                 FileName = model.FileName,
                 Title = "Список заявок и кредитов",
                 Requests = GetRequestsMoney(model),
-                //Credits = dealLogic.FormReport()
+                Credits = dealLogic.FormReport(dateFrom, dateTo)
             });
         }
         public void SendMessage(ReportBindingModelAdmin model)
