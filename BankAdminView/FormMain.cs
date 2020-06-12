@@ -67,7 +67,7 @@ namespace BankAdminView
                 int id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
                 try
                 {
-                    logic.TakeOrderInWork(new ChangeStatusBindingModel { DealId = id });
+                    logic.TakDealInWork(new ChangeStatusBindingModel { DealId = id });
                     LoadData();
                 }
                 catch (Exception ex)

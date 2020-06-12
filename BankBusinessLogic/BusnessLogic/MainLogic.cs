@@ -15,7 +15,7 @@ namespace BankBusinessLogic.BusnessLogic
                 this.storageMoneyLogic = storageMoneyLogic;
             }
 
-            public void CreateOrder(DealBindingModel model)
+            public void CreateDeal(DealBindingModel model)
             {
                 dealLogic.CreateOrUpdate(new DealBindingModel
                 {
@@ -28,26 +28,27 @@ namespace BankBusinessLogic.BusnessLogic
                 });
             }
 
-            public void TakeOrderInWork(ChangeStatusBindingModel model)
+            public void TakDealInWork(ChangeStatusBindingModel model)
             {
-            var order = dealLogic.Read(new DealBindingModel { Id = model.DealId })?[0];
-            if (order == null)
+            var deal = dealLogic.Read(new DealBindingModel { Id = model.DealId })?[0];
+            if (deal == null)
             {
-                throw new Exception("Не найден заказ");
+                throw new Exception("Не найдена сделка");
             }
-            if (order.Status != DealStatus.Принят)
+            if (deal.Status != DealStatus.Принят)
             {
-                throw new Exception("Заказ не в статусе \"Принят\"");
+                throw new Exception("Сделка не в статусе \"Принят\"");
             }
-            if (storageMoneyLogic.RemoveMaterials(order))
+            if (storageMoneyLogic.RemoveMaterials(deal))
             {
+                storageMoneyLogic.CancelReservation(deal);
                 dealLogic.CreateOrUpdate(new DealBindingModel
                 {
-                    Id = order.Id,
-                    DealName = order.DealName,
-                    DealCredits = order.DealCredits,
-                    ClientFIO = order.ClientFIO,
-                    ClientId = order.ClientId,
+                    Id = deal.Id,
+                    DealName = deal.DealName,
+                    DealCredits = deal.DealCredits,
+                    ClientFIO = deal.ClientFIO,
+                    ClientId = deal.ClientId,
                     Status = DealStatus.Подписан
                 });
             }

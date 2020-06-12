@@ -71,7 +71,7 @@
             this.buttonGetMoney.Name = "buttonGetMoney";
             this.buttonGetMoney.Size = new System.Drawing.Size(214, 31);
             this.buttonGetMoney.TabIndex = 5;
-            this.buttonGetMoney.Text = "Получить деньги по заявке";
+            this.buttonGetMoney.Text = "Сохранить заявку и получить деньги";
             this.buttonGetMoney.UseVisualStyleBackColor = true;
             this.buttonGetMoney.Click += new System.EventHandler(this.buttonGetMoney_Click);
             // 

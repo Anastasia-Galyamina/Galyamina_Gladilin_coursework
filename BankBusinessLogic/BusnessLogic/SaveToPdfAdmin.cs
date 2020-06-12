@@ -74,13 +74,13 @@ namespace BankBusinessLogic.BusnessLogic
                     {
                         Table = table2,
                         Texts = new List<string> {
-                        fb.Value.Item1,
-                        fb.Value.Item2,
-                        fb.Value.Item3,
-                        fb.Value.Item4,
-                        fb.Value.Item5.ToString(),
-                        fb.Value.Item6,
-                        fb.Value.Item7.ToString()
+                        fb.DealName,
+                        fb.ClientFio,
+                        fb.CreditName,
+                        fb.Term,
+                        fb.Date.ToString(),
+                        fb.Currency,
+                        fb.Price.ToString()
                         },
                         Style = "Normal",
                         ParagraphAlignment = ParagraphAlignment.Left

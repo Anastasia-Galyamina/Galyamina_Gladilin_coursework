@@ -1,6 +1,7 @@
 ﻿using BankBusinessLogic.BindingModels;
 using BankBusinessLogic.InterFaces;
 using BankBusinessLogic.ViewModels;
+using DocumentFormat.OpenXml.EMMA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,29 @@ namespace BankDataBaseImplement.Implements
                     Reserved = rec.Reserved
                 })
                 .ToList();
+            }
+        }
+
+        public void CancelReservation(DealViewModel deal)
+        {
+            using (var context = new BankDataBase())
+            {                
+                foreach(var dealCredit in context.DealCredits)
+                {
+                    foreach(var credit in context.Credits)
+                    {
+                        if(dealCredit.DealId == deal.Id && dealCredit.CreditId == credit.Id)
+                        {
+                            foreach(var storage in context.StorageMoney)
+                            {
+                                if(storage.MoneyId == credit.MoneyId)
+                                {
+                                    storage.Reserved -= credit.Price;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         public bool RemoveMaterials(DealViewModel deal)

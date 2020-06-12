@@ -37,9 +37,9 @@
             this.кредитыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.складыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заявкаНаДеньгиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчётToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonOpenDeal = new System.Windows.Forms.Button();
-            this.отчётToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             // buttonRef
             // 
-            this.buttonRef.Location = new System.Drawing.Point(772, 166);
+            this.buttonRef.Location = new System.Drawing.Point(772, 155);
             this.buttonRef.Name = "buttonRef";
             this.buttonRef.Size = new System.Drawing.Size(206, 25);
             this.buttonRef.TabIndex = 4;
@@ -124,6 +124,13 @@
             this.заявкаНаДеньгиToolStripMenuItem.Text = "Заявка на деньги";
             this.заявкаНаДеньгиToolStripMenuItem.Click += new System.EventHandler(this.заявкаНаДеньгиToolStripMenuItem_Click);
             // 
+            // отчётToolStripMenuItem
+            // 
+            this.отчётToolStripMenuItem.Name = "отчётToolStripMenuItem";
+            this.отчётToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.отчётToolStripMenuItem.Text = "Отчёт";
+            this.отчётToolStripMenuItem.Click += new System.EventHandler(this.отчётToolStripMenuItem_Click);
+            // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -141,13 +148,6 @@
             this.buttonOpenDeal.Text = "Содержимое сделки ";
             this.buttonOpenDeal.UseVisualStyleBackColor = true;
             this.buttonOpenDeal.Click += new System.EventHandler(this.buttonOpenDeal_Click);
-            // 
-            // отчётToolStripMenuItem
-            // 
-            this.отчётToolStripMenuItem.Name = "отчётToolStripMenuItem";
-            this.отчётToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.отчётToolStripMenuItem.Text = "Отчёт";
-            this.отчётToolStripMenuItem.Click += new System.EventHandler(this.отчётToolStripMenuItem_Click);
             // 
             // FormMain
             // 

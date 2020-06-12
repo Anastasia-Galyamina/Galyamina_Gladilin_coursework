@@ -44,7 +44,7 @@ namespace BankRestApi.Controllers
 
         [HttpPost]
         public void CreateDeal(DealBindingModel model) =>
-       _main.CreateOrder(model);        
+       _main.CreateDeal(model);        
         [HttpPost]
         public void DocCreditDial(ReportBindingModel model) => _report.DocCreditDeal(model);
         [HttpPost]

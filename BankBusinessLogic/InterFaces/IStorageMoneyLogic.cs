@@ -8,5 +8,6 @@ namespace BankBusinessLogic.InterFaces
     {
         List<StorageMoneyViewModel> Read(StorageMoneyBindingModel model);
         bool RemoveMaterials(DealViewModel order);
+        void CancelReservation(DealViewModel deal);
     }
 }

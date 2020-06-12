@@ -1,16 +1,9 @@
 ﻿using BankBusinessLogic.BindingModels;
 using BankBusinessLogic.BusnessLogic;
 using BankBusinessLogic.InterFaces;
-using iTextSharp.text.pdf.parser;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BankAdminView
@@ -19,11 +12,13 @@ namespace BankAdminView
     {
         private readonly ReportLogicAdmin logic;
         private readonly IRequestLogic requestLogic;
-        public FormReport(ReportLogicAdmin logic, IRequestLogic requestLogic)
+        private readonly IDealLogic dealLogic;
+        public FormReport(ReportLogicAdmin logic, IRequestLogic requestLogic, IDealLogic dealLogic)
         {
             InitializeComponent();
             this.logic = logic;
             this.requestLogic = requestLogic;
+            this.dealLogic = dealLogic;
         }
 
         [Obsolete]
@@ -67,7 +62,7 @@ namespace BankAdminView
                 {
                     ids.Add(request.Id);
                 }
-            }
+            }            
             try
             {
                 var dataSource = logic.GetRequestsMoney(new ReportBindingModelAdmin
@@ -76,8 +71,11 @@ namespace BankAdminView
                     RequestsId = ids
 
                 });
+                var dataSource2 = dealLogic.FormReport(dateTimePickerFrom.Value, dateTimePickerTo.Value);
                 ReportDataSource source = new ReportDataSource("DataSetPdf", dataSource);
                 reportViewer.LocalReport.DataSources.Add(source);
+                ReportDataSource source2 = new ReportDataSource("DataSetCredits", dataSource2);
+                reportViewer.LocalReport.DataSources.Add(source2);
                 reportViewer.RefreshReport();
             }
             catch (Exception ex)

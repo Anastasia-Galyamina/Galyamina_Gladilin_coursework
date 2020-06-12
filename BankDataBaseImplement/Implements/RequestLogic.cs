@@ -55,8 +55,7 @@ namespace BankDataBaseImplement.Implements
                     StorageMoney storage = context.StorageMoney.FirstOrDefault(rec => rec.Money.Currency == currency.Key);
                     if(storage != null)
                     {
-                        storage.Count += currency.Value;
-                        storage.Reserved = 0;
+                        storage.Count += currency.Value;                       
                     }
                                     
                     

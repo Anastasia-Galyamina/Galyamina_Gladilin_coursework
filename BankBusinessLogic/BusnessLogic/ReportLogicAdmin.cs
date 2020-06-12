@@ -63,9 +63,9 @@ namespace BankBusinessLogic.BusnessLogic
             SaveToPdfAdmin.CreateDoc(new PdfInfo
             {
                 FileName = model.FileName,
-                Title = "Список заявок",
+                Title = "Список заявок и кредитов",
                 Requests = GetRequestsMoney(model),
-                Credits = dealLogic.FormReport()
+                //Credits = dealLogic.FormReport()
             });
         }
         public void SendMessage(ReportBindingModelAdmin model)
