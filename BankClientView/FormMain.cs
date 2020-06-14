@@ -1,18 +1,9 @@
 ﻿using BankAdminView;
-using BankBusinessLogic.BindingModels;
-using BankBusinessLogic.Enums;
 using BankBusinessLogic.ViewModels;
 using BankDataBaseImplement;
 using BankDataBaseImplement.Implements;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BankClientView
@@ -21,6 +12,7 @@ namespace BankClientView
     {
         
         DealLogic logic = new DealLogic();
+        BackUpLogic backUpAbstractLogic = new BackUpLogic();
         public FormMain()
         {
             InitializeComponent();
@@ -120,5 +112,27 @@ namespace BankClientView
                 LoadList();
             }
         }
+        private void СоздатьБекапToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (backUpAbstractLogic != null)
+                {
+                    var fbd = new FolderBrowserDialog();
+                    if (fbd.ShowDialog() == DialogResult.OK)
+                    {
+                        backUpAbstractLogic.CreateArchive(fbd.SelectedPath);
+                        MessageBox.Show("Бекап создан", "Сообщение",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
+               MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

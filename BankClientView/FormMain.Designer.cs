@@ -30,6 +30,7 @@ namespace BankClientView
         private void InitializeComponent()
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.СоздатьБекапToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefreshOrderListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,8 @@ namespace BankClientView
             this.RefreshOrderListToolStripMenuItem,
             this.зарезервированныеДеньгиToolStripMenuItem,
             this.отчетToolStripMenuItem,
-            this.отчетПоВыполненнымСделкамToolStripMenuItem});
+            this.отчетПоВыполненнымСделкамToolStripMenuItem,
+            this.СоздатьБекапToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1135, 24);
@@ -99,6 +101,13 @@ namespace BankClientView
             this.отчетПоВыполненнымСделкамToolStripMenuItem.Text = "Отчет по выполненным сделкам";
             this.отчетПоВыполненнымСделкамToolStripMenuItem.Click += new System.EventHandler(this.отчетПоВыполненнымСделкамToolStripMenuItem_Click);
             // 
+            // СоздатьБекапToolStripMenuItem
+            // 
+            this.СоздатьБекапToolStripMenuItem.Name = "СоздатьБекапToolStripMenuItem";
+            this.СоздатьБекапToolStripMenuItem.Size = new System.Drawing.Size(201, 20);
+            this.СоздатьБекапToolStripMenuItem.Text = "Создать Бекап";
+            this.СоздатьБекапToolStripMenuItem.Click += new System.EventHandler(this.СоздатьБекапToolStripMenuItem_Click);
+            // 
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
@@ -138,6 +147,7 @@ namespace BankClientView
         private System.Windows.Forms.ToolStripMenuItem зарезервированныеДеньгиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетПоВыполненнымСделкамToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem СоздатьБекапToolStripMenuItem;
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
     }
 }

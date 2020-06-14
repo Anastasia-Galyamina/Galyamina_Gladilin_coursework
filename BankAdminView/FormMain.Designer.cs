@@ -40,6 +40,7 @@
             this.отчётToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonOpenDeal = new System.Windows.Forms.Button();
+            this.создатьБэкапToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.справочникиToolStripMenuItem,
             this.заявкаНаДеньгиToolStripMenuItem,
-            this.отчётToolStripMenuItem});
+            this.отчётToolStripMenuItem,
+            this.создатьБэкапToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1004, 24);
@@ -149,6 +151,13 @@
             this.buttonOpenDeal.UseVisualStyleBackColor = true;
             this.buttonOpenDeal.Click += new System.EventHandler(this.buttonOpenDeal_Click);
             // 
+            // создатьБэкапToolStripMenuItem
+            // 
+            this.создатьБэкапToolStripMenuItem.Name = "создатьБэкапToolStripMenuItem";
+            this.создатьБэкапToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.создатьБэкапToolStripMenuItem.Text = "Создать Бэкап";
+            this.создатьБэкапToolStripMenuItem.Click += new System.EventHandler(this.создатьБэкапToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,5 +195,6 @@
         private System.Windows.Forms.Button buttonOpenDeal;
         private System.Windows.Forms.ToolStripMenuItem заявкаНаДеньгиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчётToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem создатьБэкапToolStripMenuItem;
     }
 }

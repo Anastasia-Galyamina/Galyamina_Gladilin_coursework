@@ -13,11 +13,13 @@ namespace BankAdminView
         public new IUnityContainer Container { get; set; }
         private readonly MainLogic logic;
         private readonly IDealLogic dealLogic;
-        public FormMain(MainLogic logic, IDealLogic orderLogic)
+        private readonly BackUpAbstractLogic backUpAbstractLogic;
+        public FormMain(MainLogic logic, IDealLogic orderLogic, BackUpAbstractLogic backUpAbstractLogic)
         {
             InitializeComponent();
             this.logic = logic;
             this.dealLogic = orderLogic;
+            this.backUpAbstractLogic = backUpAbstractLogic;
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -111,6 +113,29 @@ namespace BankAdminView
         {
             var form = Container.Resolve<FormReport>();
             form.ShowDialog();
+        }
+
+        private void создатьБэкапToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            try
+            {
+                if (backUpAbstractLogic != null)
+                {
+                    var fbd = new FolderBrowserDialog();
+                    if (fbd.ShowDialog() == DialogResult.OK)
+                    {
+                        backUpAbstractLogic.CreateArchive(fbd.SelectedPath);
+                        MessageBox.Show("Бекап создан", "Сообщение",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

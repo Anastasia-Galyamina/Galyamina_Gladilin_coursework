@@ -36,6 +36,7 @@ namespace BankAdminView
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<ICreditLogic, CreditLogic>(new
            HierarchicalLifetimeManager());
+            currentContainer.RegisterType<BackUpAbstractLogic, BackUpLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IClientLogic, ClientLogic>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<MainLogic>(new HierarchicalLifetimeManager());
